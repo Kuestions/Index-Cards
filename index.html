@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<script src="libs/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="libs/bootstrap.min.css">
+<!-- Optional Bootstrap theme -->
+<link rel="stylesheet" href="libs/bootstrap-theme.min.css">
+<script src="libs/bootstrap.min.js"></script>
+<script src="libs/angular.min.js"></script>
+<script src="libs/angular-ui-router.min.js"></script>    
+
+<!--App.js, link to file containing state, .config, and .run app functions -->     
+<script src="JS/app.js"></script>
+    
+<!--CSS -->     
+<link rel="stylesheet" href="indexCards.css">    
+    
+<!--Services -->    
+<script src="JS/vocabularyService.js"></script>
+<script src=""></script>
+
+<!--Navigation files -->    
+<script src="JS/indexCardsController.js"></script>
+<script src=""></script>  
+    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1, maximum-scale=1" charset="utf-8">   
+<title>Index Cards</title>
+</head>
+    
+<!--sets the HTML document to a angularJS app call myApp -->
+<body ng-app="IndexCards">
+  
+<div class="container-fluid">
+    <div class="row " ng-controller="indexCardsController">
+        <div class="hidden-xs col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
+        <!--Top row containing score and start over button -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!--left section containing the start over button -->
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <button type="button" class="btn btn-sm" ng-click="restart()">Restart</button>
+            </div>
+            <!--right section containing the score -->
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
+                <p>Score {{score}}</p>
+            </div>       
+        </div><!--end of top div containing score and start over button -->
+        <!--Row containing Question and answers -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2>{{currentQuestionNumber}}. {{currentQuestion}}</h2>
+        </div><!--end of div containing main question-->
+        
+            <div class="row radioButtonIndent" ng-repeat="a in currentAnswers">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="radio">
+                        <label><input class="radioButtonSize" type="radio" ng-value="a.correct" ng-click="select(a.correct)" name={{currentQuestion}}>
+                            {{a.answer}}             
+                        </label>
+                    </div>
+                </div>                
+            </div><!--end of row contining secondary ng-repeat for answers-->
+                        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign">
+            <button type="button" class="btn btn-lg " ng-click="done()">Done</button>
+        </div><!--end of div with Done button--> 
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-4 col-lg-4"></div>    
+    </div><!--end of row that contains the ng-controller -->
+</div><!--end of container of the row that contains the body -->
+</body>    
+</html>
