@@ -53,17 +53,29 @@
             <div class="row radioButtonIndent" ng-repeat="a in currentAnswers">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="radio">
-                        <label><input class="radioButtonSize" type="radio" ng-value="a.correct" ng-click="select(a.correct)" name={{currentQuestion}}>
-                            {{a.answer}}             
+                        <label><span ng-hide="showButtons==true && a.correct==false" ng-class="{'highlightAnswer':showButtons==true && a.correct==true}"><input class="radioButtonSize" type="radio" ng-value="a.correct" ng-click="select(a.correct)" name={{currentQuestion}}>
+                            {{a.answer}}
+                            </span>
                         </label>
                     </div>
                 </div>                
-            </div><!--end of row contining secondary ng-repeat for answers-->
-                        
+            </div><!--end of row contining secondary ng-repeat for answers--> 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign">
-            <button type="button" class="btn btn-lg " ng-click="done()">Done</button>
-        </div><!--end of div with Done button--> 
+            <span ng-show="showButtons==false">
+                <button type="button" class="btn btn-lg " ng-click="done()">Done</button>
+            </span>
+            <span ng-show="showButtons==true">
+                <button type="button" class="btn btn-lg " ng-click="continue()">Continue</button>
+            </span>            
+        </div><!--end of div with Done button-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 celebratrionIconSize centerAlign"> 
+            
+            <span ng-show="showCorrectAnswer==true" class=""><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i> Good Job <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i></span>
+            
+            <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> You Got It Wrong <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
+        
         </div>
+        </div><!--end of div containing the body of the app-->
         <div class="hidden-xs col-sm-2 col-md-4 col-lg-4"></div>    
     </div><!--end of row that contains the ng-controller -->
 </div><!--end of container of the row that contains the body -->

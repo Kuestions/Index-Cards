@@ -29,13 +29,13 @@ myApp.factory('Vocabulary',  function () {
 
             //randomly pick the first answer. Keep if it doesn’t match the currentCorrectAnswer, re-pick if it matches the currentCorrectAnswer
             var firstAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
-            if(currentCorrectAnswer==firstAnswer){
+            while(currentCorrectAnswer==firstAnswer){
              var firstAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             }
 
             //randomly pick the second answer and keep if it doesn’t match the correct answer and first answer
             var secondAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
-            if(currentCorrectAnswer==secondAnswer || firstAnswer == secondAnswer){
+            while(currentCorrectAnswer===secondAnswer || firstAnswer === secondAnswer){
             var secondAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             }
 
