@@ -62,4 +62,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         $scope.setupIndexCards();
     }
     
+    $scope.restart = function(){
+        location.reload();
+    }
+    
 });//end of indexCardsController
