@@ -16,7 +16,7 @@
     
 <!--Services -->    
 <script src="JS/vocabularyService.js"></script>
-<script src=""></script>
+<script src="JS/scoreService.js"></script>
 
 <!--Navigation files -->    
 <script src="JS/indexCardsController.js"></script>
@@ -42,7 +42,7 @@
             </div>
             <!--right section containing the score -->
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
-                <p>Score {{score}}</p>
+                <p>Score {{score | number: 0}}</p>
             </div>       
         </div><!--end of top div containing score and start over button -->
         <!--Row containing Question and answers -->

@@ -1,4 +1,4 @@
-myApp.controller('indexCardsController',  function($scope, Vocabulary){
+myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
 
     //initial score value
     $scope.score = 0;
@@ -6,7 +6,6 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary){
     $scope.setupIndexCards = function(){
         
         //get current index card
-        
         $scope.currentTest = Vocabulary.getCurrentTest();
 
         //get the current location in the test array
@@ -36,14 +35,22 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary){
     }//end of select function    
     
     $scope.done = function(){
-        
+        //update Score service that a question has been answered
+        Score.addQuestionsAnswered();
+        //hides the done button and show the continue button
         $scope.showButtons = true;
         
         if($scope.correct==true){
+            //show the correct answer celebrations
             $scope.showCorrectAnswer = true;
+            //update the Score service that a question has been answered correctly
+            Score.addScore();
         }else {
+            // show the incorrect answer celebrations
             $scope.showIncorrectAnswer= true;
         }
+        //update the score
+        $scope.score = Score.getScore();        
     }
     
     $scope.continue = function(){
