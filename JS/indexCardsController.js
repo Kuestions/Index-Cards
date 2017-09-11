@@ -3,6 +3,13 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
     //initial score value
     $scope.score = 0;
     
+    //setup variable to hide Finish screen
+    $scope.finish = false;
+
+    //get length of the test array to determine when test is finish in the continue function
+    $scope.endOfTest = Vocabulary.getLengthOfArray();    
+    
+    //sets up the index cards with the backend data
     $scope.setupIndexCards = function(){
         
         //get current index card
@@ -51,16 +58,20 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         }
         //update the score
         $scope.score = Score.getScore();        
-    }
+    }//end of done function
     
     $scope.continue = function(){
+        if($scope.currentQuestionNumber >= $scope.endOfTest){
+            $scope.finish = true;
+        }else {    
         $scope.showButtons = false;
         $scope.showCorrectAnswer = false;
         $scope.showIncorrectAnswer = false;
         
         Vocabulary.updateCurrentLocation();
         $scope.setupIndexCards();
-    }
+        }//end of else statement
+    }//end of continue function
     
     $scope.restart = function(){
         location.reload();

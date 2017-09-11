@@ -134,7 +134,11 @@ myApp.factory('Vocabulary',  function () {
         
         getCurrentLocation: function(){
             return currentLocation.location + 1;
-        }
+        }, 
+        
+        getLengthOfArray: function(){
+            return test.length
+        }        
 
     }/*End of main Return*/
     
