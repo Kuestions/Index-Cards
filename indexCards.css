@@ -1,0 +1,47 @@
+.centerAlign {
+    text-align: center;
+}
+
+.radioButtonIndent {
+    text-indent: 5%;
+    font-size: 150%;
+}
+
+.scoreSize {
+    font-size: 230%;
+}
+
+.celebratrionIconSize {
+    font-size:  210%;
+}
+
+.highlightAnswer {
+    font-size: 230%;
+    color: green;
+}
+
+.radioButtonSize {
+    width: 2.3vh;
+    height: 2.3vh;
+}
+
+.mainColors {
+    color: navy;
+    background-color: lightcyan;
+}
+
+.actionButtons {
+    background-color: green;
+}
+
+.continueButton {
+    background-color: yellow;
+}
+
+.restartButton {
+    background-color: red;
+}
+
+body {
+    min-height: 100%;
+}
