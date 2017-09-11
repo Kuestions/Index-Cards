@@ -3,17 +3,24 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary){
     //initial score value
     $scope.score = 0;
     
+    $scope.setupIndexCards = function(){
+        
+        //get current index card
+        
+        $scope.currentTest = Vocabulary.getCurrentTest();
+
+        //get the current location in the test array
+        $scope.currentQuestionNumber = Vocabulary.getCurrentLocation();
+
+        //get the current question from the test array
+        $scope.currentQuestion = $scope.currentTest[0];
+
+        //get the current array of answers from the test array
+        $scope.currentAnswers = $scope.currentTest[1];    
+    }
+    
     //initial vocabulary database for start-up
-    $scope.currentTest = Vocabulary.getCurrentTest();
-    
-    //get the current location in the test array
-    $scope.currentQuestionNumber = Vocabulary.getCurrentLocation();
-    
-    //get the current question from the test array
-    $scope.currentQuestion = $scope.currentTest[0];
-    
-    //get the current array of answers from the test array
-    $scope.currentAnswers = $scope.currentTest[1];
+    $scope.setupIndexCards();
     
     //set the showCorrectAnswer varible to false at startup
     $scope.showCorrectAnswer = false;
@@ -43,6 +50,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary){
         $scope.showButtons = false;
         $scope.showCorrectAnswer = false;
         $scope.showIncorrectAnswer = false;
+        
+        Vocabulary.updateCurrentLocation();
+        $scope.setupIndexCards();
     }
     
 });//end of indexCardsController
