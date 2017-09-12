@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="libs/bootstrap-theme.min.css">
 <script src="libs/bootstrap.min.js"></script>
 <script src="libs/angular.min.js"></script>
-<script src="libs/angular-ui-router.min.js"></script>    
+<script src="libs/angular-ui-router.min.js"></script>
 
 <!--App.js, link to file containing state, .config, and .run app functions -->     
 <script src="JS/app.js"></script>
@@ -68,7 +68,7 @@
             </div><!--end of row contining secondary ng-repeat for answers--> 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign ">
             <span ng-show="showButtons==false">
-                <button type="button" class="btn btn-lg actionButtons" ng-click="done()">Done</button>
+                <button type="button" class="btn btn-lg actionButtons" ng-click="done()">Finish</button>
             </span>
             <span ng-show="showButtons==true">
                 <button type="button" class="btn btn-lg continueButton" ng-click="continue()">Continue</button>
@@ -76,9 +76,9 @@
         </div><!--end of div with Done button-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 celebratrionIconSize centerAlign"> 
             
-            <span ng-show="showCorrectAnswer==true" class=""><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i> Good Job <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i></span>
+            <span ng-show="showCorrectAnswer==true" class=""><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i> {{positiveFeedBack}} <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i></span>
             
-            <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> You Got It Wrong <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
+            <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> {{negativeFeedBack}} <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
         
         </div>
         </div><!--end of div containing the body of the app-->

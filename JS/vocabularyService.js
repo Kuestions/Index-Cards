@@ -22,7 +22,7 @@ myApp.factory('Vocabulary',  function () {
         {"term":"A relationship in which one animal hunt, kills, and eat another animala", "correctAnswer":"predator/prey"},
         {"term":"An animal that is subject to be caught and eaten by another animal", "correctAnswer":"prey"},
         {"term":"Are organisms that eat only animals", "correctAnswer":"carnivores"},
-        {"term":"Organisms on which a parasite feed on", "correctAnswer":"cooperation"},
+        {"term":"Organisms on which a parasite feed on", "correctAnswer":"host/victim"},
         {"term":"A process use by plants that use energy from the sun to convert carbon dioxide into sugar and oxygen. ", "correctAnswer":"photosynthesis"},
         {"term":"Process that convert nitrogen gas into ammonia.", "correctAnswer":"nitrogen fixation"},
         {"term":"water travel from the atmosphere to the ground", "correctAnswer":"precipitation"},
