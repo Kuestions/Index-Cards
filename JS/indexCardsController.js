@@ -7,7 +7,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
     $scope.finish = false;
 
     //get length of the test array to determine when test is finish in the continue function
-    $scope.endOfTest = Vocabulary.getLengthOfArray();    
+    $scope.endOfTest = Vocabulary.getLengthOfArray();
+    
+    //randomize test questions
+    Vocabulary.randomizeTest();
     
     //sets up the index cards with the backend data
     $scope.setupIndexCards = function(){
@@ -22,7 +25,13 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         $scope.currentQuestion = $scope.currentTest[0];
 
         //get the current array of answers from the test array
-        $scope.currentAnswers = $scope.currentTest[1];    
+        $scope.currentAnswers = $scope.currentTest[1];
+        
+        //get a random positive Feedback to show when a correct answer is chosen
+        $scope.positiveFeedBack = Score.getPositiveFeedBack();
+        
+        //get a random negative Feedback to show when a incorrect answer is chosen
+        $scope.negativeFeedBack = Score.getNegataiveFeedBack();
     }
     
     //initial vocabulary database for start-up

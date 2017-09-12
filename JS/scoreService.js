@@ -3,6 +3,9 @@ myApp.factory('Score', [ function () {
     
     var score = {"count":0};
     var answered = {"questionsAnswered":0};
+    
+    var positiveFeedBack = ["Good Job", "Well Done", "Awesome"];
+    var negativeFeedBack = ["You Got It Wrong", "Keep Trying", "Try Again"];
      
      return {
          
@@ -19,6 +22,16 @@ myApp.factory('Score', [ function () {
          //return the current score
          getScore: function(){                
                return (score.count/answered.questionsAnswered)*100;
+         }, 
+         
+         //return a random positive feedback
+         getPositiveFeedBack: function(){
+              return positiveFeedBack[Math.floor(Math.random() * positiveFeedBack.length)];
+         },
+         
+         //return a random negative feedback
+         getNegataiveFeedBack: function(){
+              return negativeFeedBack[Math.floor(Math.random() * negativeFeedBack.length)];
          }
      }/*End of main Return*/
     

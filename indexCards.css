@@ -18,6 +18,7 @@
 .highlightAnswer {
     font-size: 230%;
     color: green;
+    transition: 1.5s;
 }
 
 .radioButtonSize {
@@ -32,10 +33,12 @@
 
 .actionButtons {
     background-color: green;
+    color: white
 }
 
 .continueButton {
-    background-color: yellow;
+    background-color: dodgerblue;
+    color: white
 }
 
 .restartButton {
