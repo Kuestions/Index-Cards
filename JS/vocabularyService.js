@@ -55,6 +55,24 @@ myApp.factory('Vocabulary',  function () {
     // location object that points to the current location in the test array
     var currentLocation = {"location":0};
     
+    var randomizeTest = [];
+    
+    /* Fisher-Yates shuffle used below
+        shuffles: function(array){
+            var currentIndex = array.length, temporayValue, randomIndex;
+            
+            while(0 !== currentIndex){
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                
+                temporayValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporayValue;
+            }
+            return array;
+        }
+    */        
+    
     
     return {
         
@@ -90,23 +108,6 @@ myApp.factory('Vocabulary',  function () {
             //push all answers into the currentTestAnswers as an object with a second attribute as true or false
             currentTestAnswers.push({"answer": currentCorrectAnswer, "correct":true}, {"answer": firstAnswer, "correct":false}, {"answer": secondAnswer, "correct":false});
             
-        
-
-        /* Fisher-Yates shuffle used below
-        shuffles: function(array){
-            var currentIndex = array.length, temporayValue, randomIndex;
-            
-            while(0 !== currentIndex){
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-                
-                temporayValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporayValue;
-            }
-            return array;
-        }
-        */            
             //Shuffle the currentTestAnswers array
             var currentIndex = currentTestAnswers.length, temporayValue, randomIndex;
             
@@ -138,7 +139,22 @@ myApp.factory('Vocabulary',  function () {
         
         getLengthOfArray: function(){
             return test.length
-        }        
+        },
+        
+        randomizeTest: function(){
+            
+            //Shuffle the test array
+            var currentIndex = test.length, temporayValue, randomIndex;
+            
+            while(0 !== currentIndex){
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                
+                temporayValue = test[currentIndex];
+                test[currentIndex] = test[randomIndex];
+                test[randomIndex] = temporayValue;
+            } 
+        }
 
     }/*End of main Return*/
     

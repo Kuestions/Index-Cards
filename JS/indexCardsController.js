@@ -7,7 +7,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
     $scope.finish = false;
 
     //get length of the test array to determine when test is finish in the continue function
-    $scope.endOfTest = Vocabulary.getLengthOfArray();    
+    $scope.endOfTest = Vocabulary.getLengthOfArray();
+    
+    //randomize test questions
+    Vocabulary.randomizeTest();
     
     //sets up the index cards with the backend data
     $scope.setupIndexCards = function(){
