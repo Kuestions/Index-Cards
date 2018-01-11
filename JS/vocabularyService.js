@@ -158,5 +158,5 @@ myApp.factory('Vocabulary',  function () {
 
     }/*End of main Return*/
     
-    
+    //By Smiley
 });
