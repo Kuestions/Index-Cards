@@ -2,6 +2,7 @@
 myApp.factory('Vocabulary',  function () {
     
     //test array containing vocabulary words as terms and definitions as correctAnswer
+    /*
     var test = [
         {"term":"The knowledge obtained by observing natural events and conditions in order to discover facts and formulate laws or priniciples that can be verified or tested", "correctAnswer":"Science"}, 
         {"term":"The application of science for pratical purposes", "correctAnswer":"Technology"}, 
@@ -38,7 +39,7 @@ myApp.factory('Vocabulary',  function () {
         {"term":"many people plant trees on Earth Day", "correctAnswer":"Left"},
         {"term":"John Muir (right) and Teddy Roosevelt at Yosemite", "correctAnswer":"Above"}        
     ];
-
+*/
     // location object that points to the current location in the test array
     var currentLocation = {"location":0};
     
@@ -64,8 +65,9 @@ myApp.factory('Vocabulary',  function () {
     return {
         
         //function call by the controller to load the current term and three answers using an array
-        getCurrentTest: function(){
+        getCurrentTest: function(data){
 
+            var test = data;
             var currentTestArray = [];//array return to the controller with term and three answers
             
             var currentAnswerArray = [];// array to hold three answers
@@ -124,11 +126,11 @@ myApp.factory('Vocabulary',  function () {
             return currentLocation.location + 1;
         }, 
         
-        getLengthOfArray: function(){
+        getLengthOfArray: function(test){
             return test.length
         },
         
-        randomizeTest: function(){
+        randomizeTest: function(test){
             
             //Shuffle the test array
             var currentIndex = test.length, temporayValue, randomIndex;

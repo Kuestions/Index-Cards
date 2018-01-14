@@ -1,22 +1,25 @@
-myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
+myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data){
 
     //initial score value
-    $scope.score = 0;
+    $scope.score = 0;    
     
+    //setup variable to hide Finish screen
+    $scope.landingPage = true;
+        
     //setup variable to hide Finish screen
     $scope.finish = false;
 
     //get length of the test array to determine when test is finish in the continue function
-    $scope.endOfTest = Vocabulary.getLengthOfArray();
+    $scope.endOfTest= 0;
     
-    //randomize test questions
-    Vocabulary.randomizeTest();
+    //initialize the variable to hold the vocabulary terms and answers
+    $scope.testData = [];
     
     //sets up the index cards with the backend data
-    $scope.setupIndexCards = function(){
+    $scope.setupIndexCards = function(){    
         
         //get current index card
-        $scope.currentTest = Vocabulary.getCurrentTest();
+        $scope.currentTest = Vocabulary.getCurrentTest($scope.testData);
 
         //get the current location in the test array
         $scope.currentQuestionNumber = Vocabulary.getCurrentLocation();
@@ -32,10 +35,12 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         
         //get a random negative Feedback to show when a incorrect answer is chosen
         $scope.negativeFeedBack = Score.getNegataiveFeedBack();
+        
+        $scope.landingPage = false;
     }
     
     //initial vocabulary database for start-up
-    $scope.setupIndexCards();
+    //$scope.setupIndexCards();
     
     //set the showCorrectAnswer varible to false at startup
     $scope.showCorrectAnswer = false;
@@ -50,9 +55,11 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         $scope.correct = x;
     }//end of select function    
     
+    //function for the "finish" button. The user press this button after each question.
     $scope.done = function(){
         //update Score service that a question has been answered
         Score.addQuestionsAnswered();
+        
         //hides the done button and show the continue button
         $scope.showButtons = true;
         
@@ -77,13 +84,49 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score){
         $scope.showCorrectAnswer = false;
         $scope.showIncorrectAnswer = false;
         
+        //Change the location controller the next number
         Vocabulary.updateCurrentLocation();
+            
+        //get the next vocabulary question and answer    
         $scope.setupIndexCards();
         }//end of else statement
     }//end of continue function
     
+    //restart the app by reloading the browser page
     $scope.restart = function(){
         location.reload();
+    }
+    
+    $scope.scienceChp1MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp1();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);  
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCards();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+    }
+    
+    $scope.MSChp1MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp1();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCards();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;        
     }
     
 });//end of indexCardsController
