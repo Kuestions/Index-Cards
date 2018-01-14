@@ -45,6 +45,16 @@
     background-color: red;
 }
 
+.scienceButton {
+    background-color: orange;
+    color: black;
+}
+
+.MSButton {
+    background-color: plum;
+    color: black;
+}
+
 body {
     min-height: 100%;
 }
