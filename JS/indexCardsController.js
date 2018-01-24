@@ -199,4 +199,26 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
     }
     
+    $scope.MSChp1FB = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp1();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCardsBlank();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.fillInBlank = true;        
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "FB";
+    }    
+    
 });//end of indexCardsController
