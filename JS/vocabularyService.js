@@ -118,6 +118,38 @@ myApp.factory('Vocabulary',  function () {
            
         }, // end of getCurrentTest function
         
+        //similar to getCurrentTest() but for the fill in the blank tests. The focus is 
+        //on returning the next test question and the entire list of answers. 
+        getCurrentFillInTheBlankTest: function(data){
+            
+            var test = data; //gets an array of test questions and answers to use in the method.
+            var currentTestArray = [];//array return to the controller with term and three answers
+            
+            var currentTestAnswers = [];// array to to hold test answers            
+            
+            //get the current term and correct answer
+            var currentTerm  = test[currentLocation.location].term;
+            var currentCorrectAnswer = test[currentLocation.location].correctAnswer;
+            
+            //create an array of all the answers. Mark as true the one correct answer and false for the rest.
+            test.forEach(function(question){
+                if(question.correctAnswer===currentCorrectAnswer){
+                    currentTestAnswers.push({"answer": question.correctAnswer, "correct":true});
+                }else {
+                    currentTestAnswers.push({"answer": question.correctAnswer, "correct":false});                    
+                }
+            });//end of forEach loop
+            
+            currentTestAnswers.sort();//sort answers alphabetically
+            
+            //add the currentTerm and the randomize array of object answers to currentTestArray
+            currentTestArray.push(currentTerm);
+            currentTestArray.push(currentTestAnswers);
+            
+            //return the currentTestArray to use in the controller
+            return currentTestArray;            
+        },
+        
         updateCurrentLocation: function(){
             currentLocation.location +=  1;
         },

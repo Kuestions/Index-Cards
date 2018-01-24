@@ -48,11 +48,13 @@
 .scienceButton {
     background-color: orange;
     color: black;
+    margin-top: 5px;
 }
 
 .MSButton {
     background-color: plum;
     color: black;
+    margin-top: 5px;
 }
 
 body {
