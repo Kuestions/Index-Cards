@@ -5,6 +5,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     
     //setup variable to hide Finish screen
     $scope.landingPage = true;
+    
+    //setup variable to hide the fill in the blank test
+    $scope.fillInBlank = false;
         
     //setup variable to hide Finish screen
     $scope.finish = false;
@@ -15,7 +18,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     //initialize the variable to hold the vocabulary terms and answers
     $scope.testData = [];
     
-    //sets up the index cards with the backend data
+    //initial setup of what type of test ui to show
+    $scope.typeOfTest = "MC";
+    
+    //sets up the index cards for Multiple Choice test with the backend data
     $scope.setupIndexCards = function(){    
         
         //get current index card
@@ -36,8 +42,34 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //get a random negative Feedback to show when a incorrect answer is chosen
         $scope.negativeFeedBack = Score.getNegataiveFeedBack();
         
+        //Change the app UI screen from the landing page to the Q & A.
         $scope.landingPage = false;
     }
+    
+    //sets up the index cards for Fill in the Blank test with the backend data
+    $scope.setupIndexCardsBlank = function(){    
+        
+        //get current index card
+        $scope.currentTest = Vocabulary.getCurrentFillInTheBlankTest($scope.testData);
+
+        //get the current location in the test array
+        $scope.currentQuestionNumber = Vocabulary.getCurrentLocation();
+
+        //get the current question from the test array
+        $scope.currentQuestion = $scope.currentTest[0];
+
+        //get the current array of answers from the test array
+        $scope.currentAnswers = $scope.currentTest[1];
+        
+        //get a random positive Feedback to show when a correct answer is chosen
+        $scope.positiveFeedBack = Score.getPositiveFeedBack();
+        
+        //get a random negative Feedback to show when a incorrect answer is chosen
+        $scope.negativeFeedBack = Score.getNegataiveFeedBack();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+    }    
     
     //initial vocabulary database for start-up
     //$scope.setupIndexCards();
@@ -62,8 +94,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //hides the done button and show the continue button
         $scope.showButtons = true;
-        
-        if($scope.correct==true){
+
+        //test if the chosen answer is true for mulitple choice and fill in the blank type tests        
+        if($scope.correct==true || $scope.correct.correct){
             //show the correct answer celebrations
             $scope.showCorrectAnswer = true;
             //update the Score service that a question has been answered correctly
@@ -87,8 +120,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //Change the location controller the next number
         Vocabulary.updateCurrentLocation();
             
+        if($scope.typeOfTest=="MC"){
+            //get the next vocabulary question and answer    
+            $scope.setupIndexCards();            
+        }else{
+            $scope.setupIndexCardsBlank();
+        }
+            
         //get the next vocabulary question and answer    
-        $scope.setupIndexCards();
+        //$scope.setupIndexCards();
+            
         }//end of else statement
     }//end of continue function
     
@@ -111,6 +152,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //Change the app UI screen from the landing page to the Q & A.
         $scope.landingPage = false;
+        
+        $scope.typeOfTest = "MC";
     }
     
     $scope.MSChp1MC = function(){
@@ -126,7 +169,56 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.setupIndexCards();
         
         //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false;        
+        $scope.landingPage = false; 
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "MC";
     }
+    
+    $scope.scienceChp1FB = function(){
+        
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp1();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);  
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCardsBlank();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false; 
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.fillInBlank = true;
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "FB";
+        
+    }
+    
+    $scope.MSChp1FB = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp1();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCardsBlank();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.fillInBlank = true;        
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "FB";
+    }    
     
 });//end of indexCardsController

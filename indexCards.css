@@ -33,12 +33,17 @@
 
 .actionButtons {
     background-color: green;
-    color: white
+    color: white;
 }
 
 .continueButton {
     background-color: dodgerblue;
-    color: white
+    color: white;    
+}
+
+.continueButton, .actionButtons {
+    margin-top: 10px;
+    letter-spacing: 2px;
 }
 
 .restartButton {
@@ -48,11 +53,13 @@
 .scienceButton {
     background-color: orange;
     color: black;
+    margin-top: 5px;
 }
 
 .MSButton {
     background-color: plum;
     color: black;
+    margin-top: 5px;
 }
 
 body {

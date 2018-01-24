@@ -24,6 +24,7 @@
 <script src="JS/dataService.js"></script>
     
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1, maximum-scale=1" charset="utf-8">   
 <title>Index Cards</title>
 </head>
@@ -35,18 +36,25 @@
     <div class="row" ng-controller="indexCardsController">
         <div class="hidden-xs col-sm-2 col-md-3 col-lg-3"></div>
         <!--Landing page where user choose which test to take -->
-        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4" ng-show="finish==false && landingPage==true">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage==true && fillInBlank===false">
             <h1 class="centerAlign">Practice Tests</h1>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h4 class="centerAlign">Science</h4>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h4 class="centerAlign">Mississippi Studies</h4>
+                </div>
+            </div>
             <!--Left side of landing page, Science section -->
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <h4 class="centerAlign">Science</h4>
-                <button type="button" class="scienceButton" ng-click="scienceChp1MC()">Science Chp. 1 (MC)</button>
-                
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">                
+                <button type="button" class="scienceButton" ng-click="scienceChp1MC()">Science Chp. 1 (Multi-Choice)</button> 
+                <button type="button" class="scienceButton" ng-click="scienceChp1FB()">Science Chp. 1 (Fill in Blank)</button>                
             </div>
             <!--Right side of landing page, Mississippi Studies section -->
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <h4 class="centerAlign">Mississipp Studies</h4>
-                <button type="button" class="MSButton" ng-click="MSChp1MC()">MS Studies Chp. 1 (MC)</button>          
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">                
+                <button type="button" class="MSButton" ng-click="MSChp1MC()">MS Studies Chp. 1 (Multi-Choice)</button>
+                <button type="button" class="MSButton" ng-click="MSChp1FB()">MS Studies Chp. 1 (Fill in Blank)</button>                 
             </div>            
         </div>
         <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4" ng-show="finish==true">
@@ -55,12 +63,12 @@
                 <button type="button" class="btn btn-sm restartButton" ng-click="restart()">Restart</button>
             </div>            
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage===false">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage===false && fillInBlank===false">
         <!--Top row containing score and start over button -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <!--left section containing the start over button -->
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <button type="button" class="btn btn-sm restartButton" ng-click="restart()">Restart</button>
+                <button type="button" class="btn btn-sm restartButton" ng-click="restart()">RESTART</button>
             </div>
             <!--right section containing the score -->
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
@@ -86,10 +94,10 @@
             </div><!--end of row contining secondary ng-repeat for answers--> 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign ">
             <span ng-show="showButtons==false">
-                <button type="button" class="btn btn-lg actionButtons" ng-click="done()">Finish</button>
+                <button type="button" class="btn btn-lg actionButtons" ng-click="done()">FINISH</button>
             </span>
             <span ng-show="showButtons==true">
-                <button type="button" class="btn btn-lg continueButton" ng-click="continue()">Continue</button>
+                <button type="button" class="btn btn-lg continueButton" ng-click="continue()">CONTINUE</button>
             </span>            
         </div><!--end of div with Done button-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 celebratrionIconSize centerAlign"> 
@@ -100,6 +108,45 @@
         
         </div>
         </div><!--end of div containing the body of the app-->
+        
+        <!-- Fill in the Blank Test-->
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage===false && fillInBlank===true">
+        <!--Top row containing score and start over button -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!--left section containing the start over button -->
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <button type="button" class="btn btn-sm restartButton" ng-click="restart()">RESTART</button>
+            </div>
+            <!--right section containing the score -->
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
+                <p>Score {{score | number: 0}}%</p>
+            </div>       
+        </div><!--end of top div containing score and start over button -->
+        <!--Row containing Question and answers -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2>{{currentQuestionNumber}}. {{currentQuestion}}</h2>
+        </div><!--end of div containing main question-->
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <select ng-model="a.correct" ng-click="select(a.correct)" ng-options="a.answer for a in currentAnswers"></select>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign shake-slow ">
+            <span ng-show="showButtons==false">
+                <button type="button" class="btn btn-lg actionButtons" ng-click="done()">FINISH</button>
+            </span>
+            <span ng-show="showButtons==true">
+                <button type="button" class="btn btn-lg continueButton" ng-click="continue()">CONTINUE</button>
+            </span>            
+        </div><!--end of div with Done button-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 celebratrionIconSize centerAlign"> 
+            
+            <span ng-show="showCorrectAnswer==true" class=""><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i> {{positiveFeedBack}} <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color:blue"></i><i class="fa fa-heart" aria-hidden="true" style="color:red"></i><i class="fa fa-smile-o" aria-hidden="true" style="background-color:yellow"></i></span>
+            
+            <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> {{negativeFeedBack}} <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
+        
+        </div>
+        </div><!--end of div containing the body of the app-->
+        
         <div class="hidden-xs col-sm-2 col-md-3 col-lg-3"></div>    
     </div><!--end of row that contains the ng-controller -->
 </div><!--end of container of the row that contains the body -->
