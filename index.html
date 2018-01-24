@@ -126,23 +126,9 @@
             <h2>{{currentQuestionNumber}}. {{currentQuestion}}</h2>
         </div><!--end of div containing main question-->
         
-            <div class="row radioButtonIndent" ng-repeat="a in currentAnswers">
-                <!--
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="radio">
-                        <span ng-hide="showButtons==true && a.correct==false" ng-class="{'highlightAnswer':showButtons==true && a.correct==true}"><input class="radioButtonSize" type="radio" ng-value="a.correct" ng-click="select(a.correct)" name={{currentQuestion}}>
-                            <label>
-                                {{a.answer}}
-                            </label>
-                        </span>
-                                                
-                    </div>
-                </div> 
-                -->
-            </div><!--end of row contining secondary ng-repeat for answers-->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <select ng-model="correct" ng-options="a.answer for a in currentAnswers"></select>
-            </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <select ng-model="a.correct" ng-click="select(a.correct)" ng-options="a.answer for a in currentAnswers"></select>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign ">
             <span ng-show="showButtons==false">
                 <button type="button" class="btn btn-lg actionButtons" ng-click="done()">Finish</button>
