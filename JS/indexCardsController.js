@@ -71,9 +71,6 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.landingPage = false;
     }    
     
-    //initial vocabulary database for start-up
-    //$scope.setupIndexCards();
-    
     //set the showCorrectAnswer varible to false at startup
     $scope.showCorrectAnswer = false;
     
@@ -127,9 +124,6 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             $scope.setupIndexCardsBlank();
         }
             
-        //get the next vocabulary question and answer    
-        //$scope.setupIndexCards();
-            
         }//end of else statement
     }//end of continue function
     
@@ -156,6 +150,26 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.typeOfTest = "MC";
     }
     
+    //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the multiple choice test.
+    $scope.scienceChp2MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp2();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
+        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCards();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+        
+        $scope.typeOfTest = "MC";
+    }        
+    
     $scope.MSChp1MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp1();
@@ -164,7 +178,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         Vocabulary.randomizeTest($scope.testData);
         
         //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);        
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
+        
         //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
         $scope.setupIndexCards();
         
@@ -184,7 +199,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         Vocabulary.randomizeTest($scope.testData);
         
         //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);  
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
+        
         //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
         $scope.setupIndexCardsBlank();
         
@@ -207,7 +223,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         Vocabulary.randomizeTest($scope.testData);
         
         //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);        
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
+        
         //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
         $scope.setupIndexCardsBlank();
         
@@ -219,6 +236,30 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //change the type of test ui to show
         $scope.typeOfTest = "FB";
-    }    
+    }
+    
+    //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
+    $scope.scienceChp2FB = function(){
+        
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp2();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
+        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCardsBlank();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false; 
+        
+        $scope.fillInBlank = true;
+        
+        $scope.typeOfTest = "FB";
+        
+    }       
     
 });//end of indexCardsController
