@@ -18,7 +18,24 @@ myApp.factory('Data',  function () {
         {"term":"The exactness of a measurement", "correctAnswer":"Precision"},
         {"term":"A prescribed decimal place that determines the amount of rounding of the measurement", "correctAnswer":"Signifant Figure"},
         {"term":"A description of how close a measurement is to the true value of the quantity measured", "correctAnswer":"Accuracy"}
-    ];    
+    ];
+    
+        //test array containing vocabulary words as terms and definitions as correctAnswer
+    var scienceChp2 = [
+        {"term":"anything that has mass and takes up space", "correctAnswer":"Matter"}, 
+        {"term":"a substance that cannot be separated or broken down into simpler substances by chemical means", "correctAnswer":"Element"}, 
+        {"term":"the smallest unit of an element that maintains the chemical properties of that element", "correctAnswer":"Atoms"}, 
+        {"term":"a group of atoms that are held together by chemical forces; smallest unit of matter that can exist by itself and retain all of a substance chemical properties", "correctAnswer":"Molecule"},
+        {"term":"a substance made up of atoms of two or more different elements joined by chemical bonds", "correctAnswer":"Compound"},
+        {"term":"a sample of matter, either a single element or a single compound that has definite chemical and physical properties", "correctAnswer":"Pure Substance"},
+        {"term":"a combination of two or more substance that are not chemically combined", "correctAnswer":"Mixture"},
+        {"term":"the temperature and pressure at which a solid becomes a liquid", "correctAnswer":"Melting Point"},
+        {"term":"the temperature and pressure at which a liquid becomes a gas", "correctAnswer":"Boiling Point"},
+        {"term":"the ratio the mass of a substance to the volume of the substance", "correctAnswer":"Density"},
+        {"term":"the capacity of a substance to combine chemically with another substance", "correctAnswer":"Reactivity"},
+        {"term":"a change of matter from one form to another without a change in chemical properties", "correctAnswer":"Physical change"},
+        {"term":"a change that occurs when one substance change into an entirely new substance", "correctAnswer":"Chemical change"}
+    ];       
     
     var MSChp1 = [ 
         {"term":"On planet Earth", "correctAnswer":"Location"},
@@ -47,6 +64,11 @@ return {
             getScienceChp1: function() {
                 return scienceChp1;
             }, //end of getScienceChp1
+    
+            //returns the science chp 2 test terms and answers
+            getScienceChp2: function() {
+                return scienceChp2;
+            }, //end of getScienceChp2    
             
             // returns the mississippi studies chp 1 test terms and answers
             getMSChp1: function() {
