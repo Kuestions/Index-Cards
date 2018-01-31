@@ -59,6 +59,28 @@ myApp.factory('Data',  function () {
         {"term":"John Muir (right) and Teddy Roosevelt at Yosemite", "correctAnswer":"Above"}        
     ];
     
+        var MSChp2 = [ 
+        {"term":"lived along rivers and streams. Learn how to farm", "correctAnswer":"Mound builders"},
+        {"term":"The Mississippi also used the bow and arrow to make hunting easier", "correctAnswer":"Maize"},        
+        {"term":"Punished criminals and protected individuals from violence", "correctAnswer":"Clans"},
+        {"term":"Marrying outside the clan", "correctAnswer":"Exogamy"},
+        {"term":"A man have more than one wife", "correctAnswer":"Polygany"},
+        {"term":"A formal agreement between two or more nations. France gave all of its territory east of the Mississippi River, except New Orleans, to Great Britain", "correctAnswer":"Treaty"},
+        {"term":"The United States had established the frameworks for the government of territories", "correctAnswer":"Northwest Ordinance"},
+        {"term":"An allegiance to local interests. Became an important topic", "correctAnswer":"Sectionalism"},
+        {"term":"sets up the frameworks of a government and determines its powers and limitations", "correctAnswer":"Constitution"},
+        {"term":"discovered the Mississippi River but died while searching for treasure", "correctAnswer":"Hernando de Soto"},
+        {"term":"Came down the Mississippi River and claim the region for France along with Father Zenobias Membre", "correctAnswer":"Rene Robert Cavelier, Sieur de La Salle, and Henri de Tonto\i"},
+        {"term":"Died during an unsuccessful attempt to established a settlement at the mouth of the Mississippi", "correctAnswer":"La Salle"},
+        {"term":"Made several trips up and down the Mississippi river looking for La Salle.", "correctAnswer":"Tonti"},
+        {"term":"of Canada to the Gulf of Mexico to establish a colony", "correctAnswer":"Pierre le Moyne"},
+        {"term":"of Canada to the Gulf of Mexico to establish a colony", "correctAnswer":"Sieur d'Iberule"},
+        {"term":"Is the young brother of Sieur d'Iberule", "correctAnswer":"Jean-Baptiste La Moyne"},
+        {"term":"Sailed up the Mississippi River and seized several chiefs as hostages until the murderes where executed", "correctAnswer":"Sieur d'Bienville"},
+        {"term":"Served as territorial governer before being elected as Mississippi first governor.", "correctAnswer":"David Homes"},
+        {"term":"First territorial governor of Mississippi", "correctAnswer":"Winthrop Sargent"}        
+    ];
+    
 return {      
             //returns the science chp 1 test terms and answers
             getScienceChp1: function() {
@@ -73,6 +95,11 @@ return {
             // returns the mississippi studies chp 1 test terms and answers
             getMSChp1: function() {
                 return MSChp1;
+            },
+    
+            // returns the mississippi studies chp 2 test terms and answers
+            getMSChp2: function() {
+                return MSChp2;
             }
     
         }//end of the return
