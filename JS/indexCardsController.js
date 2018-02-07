@@ -208,7 +208,27 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //change the type of test ui to show
         $scope.typeOfTest = "MC";
-    }    
+    }
+    
+    $scope.MSChp5MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp5();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
+        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCards();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false; 
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "MC";
+    }     
     
     $scope.scienceChp1FB = function(){
         
@@ -279,7 +299,30 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //change the type of test ui to show
         $scope.typeOfTest = "FB";
-    }    
+    }
+    
+    $scope.MSChp5FB = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp5();
+        
+        //randomize test questions
+        Vocabulary.randomizeTest($scope.testData);
+        
+        //get length of the test array to determine when test is finish in the continue function
+        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
+        
+        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
+        $scope.setupIndexCardsBlank();
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.landingPage = false;
+        
+        //Change the app UI screen from the landing page to the Q & A.
+        $scope.fillInBlank = true;        
+        
+        //change the type of test ui to show
+        $scope.typeOfTest = "FB";
+    }     
     
     //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
     $scope.scienceChp2FB = function(){
