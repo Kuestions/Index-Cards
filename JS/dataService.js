@@ -81,6 +81,34 @@ myApp.factory('Data',  function () {
         {"term":"First territorial governor of Mississippi", "correctAnswer":"Winthrop Sargent"}        
     ];
     
+        var MSChp5 = [ 
+        {"term":"states that did not permit slavery", "correctAnswer":"Free States"},
+        {"term":"States that did permit slavery", "correctAnswer":"Slave States"},        
+        {"term":"agreement where Missouri was a slave state and Maine a free state. Slavery was not allowed in states north of the Missouri border", "correctAnswer":"Missouri Compromise"},
+        {"term":"Freedom", "correctAnswer":"Emancipation"},
+        {"term":"organize the freeing of slaves and removing them to Africa", "correctAnswer":"Mississippi Colonization Society"},
+        {"term":"rights of the states should prevail over the rights of the federal government", "correctAnswer":"States Rights"},
+        {"term":"a tax on imported goods ", "correctAnswer":"tariff"},
+        {"term":"prevent the enforcement of a federal law", "correctAnswer":"nullify"},
+        {"term":"Vice President of the U.S. supported states rights to nullify federal laws", "correctAnswer":"John C. Calhoun"},
+        {"term":"Made California  free state and some western territories could determine slavery by popular sovereignty", "correctAnswer":"Compromise of 1850"},
+        {"term":"A vote by those living there", "correctAnswer":"Popular Sovereignty"},
+        {"term":"Form to oppose the expansion of slavery", "correctAnswer":"Republican party"},
+        {"term":"withdrawal from the Union", "correctAnswer":"secession"},
+        {"term":"governor of Mississippi in 1849 who favored secession to keep slavery.", "correctAnswer":"John A. Quitman"},
+        {"term":"a Mississippi Senator who formed the Union Party. Governer in 1851", "correctAnswer":"Henry S. Foote"},
+        {"term":"Northern Democrat", "correctAnswer":"Stephen Douglas"},
+        {"term":"Leader of the Republican party that opposed slavery, elected President in 1860", "correctAnswer":"Abraham Lincoln"},
+        {"term":"states that secede from the Union", "correctAnswer":"Confederate States of America"},
+        {"term":"President of the Confederacy", "correctAnswer":"Jefferson Davis"},
+        {"term":"General in the Union Army", "correctAnswer":"Ulysses S. Grant"},
+        {"term":"Confederate general that force Union troops to retreat from Mississippi in 1862", "correctAnswer":"Nathan Bedford"},
+        {"term":"general in the Confederate Army", "correctAnswer":"John C. Pemberton"},
+        {"term":"Confederate General who destroy union supplies near Holly Springs", "correctAnswer":"Earl Van Dorn"},
+        {"term":"Union general that invaded Mississippi and captured Vicksburg", "correctAnswer":"Union General William Tecumseh Sherman"}, 
+        {"term":"all slaves own by persons in the Confederate states were free", "correctAnswer":"Emancipation Proclamation"}             
+    ];    
+    
 return {      
             //returns the science chp 1 test terms and answers
             getScienceChp1: function() {
@@ -100,6 +128,11 @@ return {
             // returns the mississippi studies chp 2 test terms and answers
             getMSChp2: function() {
                 return MSChp2;
+            },
+    
+            // returns the mississippi studies chp 5 test terms and answers
+            getMSChp5: function() {
+                return MSChp5;
             }
     
         }//end of the return
