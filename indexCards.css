@@ -50,17 +50,38 @@
     background-color: red;
 }
 
-.scienceButton {
-    background-color: orange;
-    color: black;
-    margin-top: 5px;
+/*Landing Page CSS*/
+
+/*Set the landing page button's text color, margin between buttons, box shadow,width size of display, and round out the buttons*/
+.scienceButton, .MSButton {
+    width: 100%;
+    color: black;/*button text color*/
+    margin-top: 10px; /*space at the top between buttons*/
+    border-radius: 25px; /*round out the corners of the button*/
+    box-shadow: 1px 2px grey; /*shadow under the button*/
 }
 
+/*make all science buttons orange color*/
+.scienceButton {
+    background-color: orange;
+
+}
+
+/*make all mississippi study buttons plum color*/
 .MSButton {
     background-color: plum;
-    color: black;
-    margin-top: 5px;
 }
+
+/*Word spacing for the title*/
+h1, h4 {
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+hr{
+    border: 1.5px solid blue;
+}
+
 
 body {
     min-height: 100%;
