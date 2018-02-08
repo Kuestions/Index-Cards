@@ -132,10 +132,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         location.reload();
     }
     
-    $scope.scienceChp1MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp1();
-        
+    //function to setup a multiple choice test
+    $scope.multipeChoice = function(){
         //randomize test questions
         Vocabulary.randomizeTest($scope.testData);
         
@@ -147,7 +145,15 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //Change the app UI screen from the landing page to the Q & A.
         $scope.landingPage = false;
         
-        $scope.typeOfTest = "MC";
+        $scope.typeOfTest = "MC";        
+    }
+    
+    $scope.scienceChp1MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp1();
+        
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
     }
     
     //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the multiple choice test.
@@ -155,86 +161,36 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getScienceChp2();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCards();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false;
-        
-        $scope.typeOfTest = "MC";
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
     }        
     
     $scope.MSChp1MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp1();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCards();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false; 
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "MC";
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
     }
     
     $scope.MSChp2MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp2();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCards();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false; 
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "MC";
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
     }
     
     $scope.MSChp5MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp5();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData); 
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCards();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false; 
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "MC";
-    }     
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
+    }
     
-    $scope.scienceChp1FB = function(){
-        
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp1();
-        
+    //setup the practice test as a fill in the blank
+    $scope.fillInBlankTest = function(){
         //randomize test questions
         Vocabulary.randomizeTest($scope.testData);
         
@@ -251,7 +207,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.fillInBlank = true;
         
         //change the type of test ui to show
-        $scope.typeOfTest = "FB";
+        $scope.typeOfTest = "FB";        
+    }
+    
+    $scope.scienceChp1FB = function(){
+        
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp1();
+        
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
         
     }
     
@@ -259,69 +224,24 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp1();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCardsBlank();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false;
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.fillInBlank = true;        
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "FB";
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
     }
     
     $scope.MSChp2FB = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp2();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCardsBlank();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false;
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.fillInBlank = true;        
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "FB";
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
     }
     
     $scope.MSChp5FB = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp5();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCardsBlank();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false;
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.fillInBlank = true;        
-        
-        //change the type of test ui to show
-        $scope.typeOfTest = "FB";
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
     }     
     
     //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
@@ -330,21 +250,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getScienceChp2();
         
-        //randomize test questions
-        Vocabulary.randomizeTest($scope.testData);
-        
-        //get length of the test array to determine when test is finish in the continue function
-        $scope.endOfTest = Vocabulary.getLengthOfArray($scope.testData);
-        
-        //Method that gets the vocab. data from the Data service, chosen by the user, and starts the app
-        $scope.setupIndexCardsBlank();
-        
-        //Change the app UI screen from the landing page to the Q & A.
-        $scope.landingPage = false; 
-        
-        $scope.fillInBlank = true;
-        
-        $scope.typeOfTest = "FB";
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
         
     }       
     
