@@ -35,7 +35,22 @@ myApp.factory('Data',  function () {
         {"term":"the capacity of a substance to combine chemically with another substance", "correctAnswer":"Reactivity"},
         {"term":"a change of matter from one form to another without a change in chemical properties", "correctAnswer":"Physical change"},
         {"term":"a change that occurs when one substance change into an entirely new substance", "correctAnswer":"Chemical change"}
-    ];       
+    ]; 
+    
+        //test array containing vocabulary words as terms and definitions as correctAnswer
+    var scienceChp4 = [
+        {"term":"a sub-atomic particle that has a negative charge", "correctAnswer":"Electron"}, 
+        {"term":"a sub-atomic particle that has a positive charge and that is located in the nucleus of an atom", "correctAnswer":"Proton"}, 
+        {"term":"a sub-atomic particle that has no charge and that is located in teh nucleus of an atom", "correctAnswer":"Neutron"}, 
+        {"term":"the number of protons in the nucleus of an atom", "correctAnswer":"Atomic Number"},
+        {"term":"the sum of the number of protons and neutrons in the nucleus of an atom", "correctAnswer":"Mass Number"},
+        {"term":"an atom that has the same number of protons (or the same atomic number) as other atoms of the same element but has a different number of neutrons (and a different atomic mass)", "correctAnswer":"Isotope"},
+        {"term":"a unit of mass that describes the mass of an atom or molecule; it is exactly 1/12 the mass of a carbon atom with mass number 12(symbol)", "correctAnswer":"Unified atomic mass unit"},
+        {"term":"the SI base unit used to measure the amount of a substance whose number of particles is the same as the number atoms in exactly 12g of carbon-12 ", "correctAnswer":"Mole"},
+        {"term":"a region in an atom where there is a high probability of finding electrons", "correctAnswer":"Orbital"},
+        {"term":"an electron that is found in the outermost shell of an atom and that determines the atom chemical properties", "correctAnswer":"Valence Electron"},
+        {"term":"a unit of quantum of light", "correctAnswer":"Photon"}
+    ];     
     
     var MSChp1 = [ 
         {"term":"On planet Earth", "correctAnswer":"Location"},
@@ -118,7 +133,12 @@ return {
             //returns the science chp 2 test terms and answers
             getScienceChp2: function() {
                 return scienceChp2;
-            }, //end of getScienceChp2    
+            }, //end of getScienceChp2
+    
+            //returns the science chp 4 test terms and answers
+            getScienceChp4: function() {
+                return scienceChp4;
+            }, //end of getScienceChp4     
             
             // returns the mississippi studies chp 1 test terms and answers
             getMSChp1: function() {

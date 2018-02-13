@@ -38,21 +38,27 @@ myApp.factory('Vocabulary',  function () {
             var currentTerm  = test[currentLocation.location].term;
             var currentCorrectAnswer = test[currentLocation.location].correctAnswer;
 
-            //create an array of all answers
+            /*
             for(var i=0;i<test.length;i++){
                 currentAnswerArray.push(test[i].correctAnswer);
             }
+            */
+            
+            //create an array of all answers
+            currentAnswerArray = test.map(function(x){return x.correctAnswer});
+            
+            
 
             //randomly pick the first answer. Keep if it doesn’t match the currentCorrectAnswer, re-pick if it matches the currentCorrectAnswer
             var firstAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             while(currentCorrectAnswer==firstAnswer){
-             var firstAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
+                firstAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             }
 
             //randomly pick the second answer and keep if it doesn’t match the correct answer and first answer
             var secondAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             while(currentCorrectAnswer===secondAnswer || firstAnswer === secondAnswer){
-            var secondAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
+                secondAnswer = currentAnswerArray[Math.floor(Math.random() * currentAnswerArray.length)];
             }
 
             //push all answers into the currentTestAnswers as an object with a second attribute as true or false

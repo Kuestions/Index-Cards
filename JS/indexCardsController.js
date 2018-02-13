@@ -163,7 +163,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //set up practice test as a multiple choice
         $scope.multipeChoice();
-    }        
+    }
+    
+    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the multiple choice test.
+    $scope.scienceChp4MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp4();
+        
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
+    }      
     
     $scope.MSChp1MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
@@ -249,6 +258,17 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getScienceChp2();
+        
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
+        
+    }
+    
+    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
+    $scope.scienceChp4FB = function(){
+        
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getScienceChp4();
         
         //set up practice test as a fill in the blank
         $scope.fillInBlankTest();
