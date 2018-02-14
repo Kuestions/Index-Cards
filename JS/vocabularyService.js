@@ -109,9 +109,10 @@ myApp.factory('Vocabulary',  function () {
             
             currentTestAnswers.sort();//sort answers alphabetically
             
-            //add the currentTerm and the randomize array of object answers to currentTestArray
+            //add the currentTerm, currentCorrectAnswer, and the randomize array of object answers to currentTestArray
             currentTestArray.push(currentTerm);
             currentTestArray.push(currentTestAnswers);
+            currentTestArray.push(currentCorrectAnswer);
             
             //return the currentTestArray to use in the controller
             return currentTestArray;            

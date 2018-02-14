@@ -145,11 +145,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <select ng-model="a.correct" ng-click="select(a.correct)" ng-options="a.answer for a in currentAnswers"></select>
         </div>
+        <br>    
         <!--show correct answer if wrong-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <label>
-                    {{a.correct.correct}}
-                </label>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign">
+            <br>
+            <h4><span ng-show="showButtons==true" ng-class="{'highlightAnswer':showButtons==true}">{{correctAnswers}}</span></h4>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign shake-slow ">
             <span ng-show="showButtons==false">

@@ -61,6 +61,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //get the current array of answers from the test array
         $scope.currentAnswers = $scope.currentTest[1];
         
+        //get the current correct answer from the test array
+        $scope.correctAnswers = $scope.currentTest[2];        
+        
         //get a random positive Feedback to show when a correct answer is chosen
         $scope.positiveFeedBack = Score.getPositiveFeedBack();
         
