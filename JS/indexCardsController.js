@@ -1,4 +1,4 @@
-myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data){
+myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data, Streak){
 
     //initial score value
     $scope.score = 0;    
@@ -20,6 +20,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     
     //initial setup of what type of test ui to show
     $scope.typeOfTest = "MC";
+    
+    
+    //initial variable to show student streak
+    $scope.streak = 0;
     
     //sets up the index cards for Multiple Choice test with the backend data
     $scope.setupIndexCards = function(){    
@@ -101,9 +105,21 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             $scope.showCorrectAnswer = true;
             //update the Score service that a question has been answered correctly
             Score.addScore();
+            
+            //add to the addStreak counter, if more then 3 add to streak counter
+            Streak.addStartStreak();
+            
+            //update streak variable 
+            $scope.streak = Streak.getStreak();
         }else {
             // show the incorrect answer celebrations
             $scope.showIncorrectAnswer= true;
+            
+            //reset streak
+            Streak.resetStreak();
+            
+            //update streak variable 
+            $scope.streak = Streak.getStreak();            
         }
         //update the score
         $scope.score = Score.getScore();        
