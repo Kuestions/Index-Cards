@@ -18,7 +18,8 @@
 <!--Services -->    
 <script src="JS/vocabularyService.js"></script>
 <script src="JS/scoreService.js"></script>
-
+<script src="JS/streakService.js"></script>
+    
 <!--Navigation files -->    
 <script src="JS/indexCardsController.js"></script>
 <script src="JS/dataService.js"></script>
@@ -88,7 +89,11 @@
             <!--right section containing the score -->
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
                 <p>Score {{score | number: 0}}%</p>
-            </div>       
+            </div>
+            <!--show student streak -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign streakColor" ng-show="streak >=3">
+                <h2>STREAK {{streak}}</h2>
+            </div>
         </div><!--end of top div containing score and start over button -->
         <!--Row containing Question and answers -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -135,7 +140,11 @@
             <!--right section containing the score -->
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
                 <p>Score {{score | number: 0}}%</p>
-            </div>       
+            </div>
+            <!--show student streak -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign streakColor" ng-show="streak >=3">
+                <h2>STREAK {{streak}}</h2>
+            </div>            
         </div><!--end of top div containing score and start over button -->
         <!--Row containing Question and answers -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -50,6 +50,21 @@
     background-color: red;
 }
 
+.streakColor {
+    color: green;
+    animation-name: blinking;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+    0%      {color:green;}
+    50%     {color:orange;}
+    100%    {color: navy;}
+}
+
+
+
 /*Landing Page CSS*/
 
 /*Set the landing page button's text color, margin between buttons, box shadow,width size of display, and round out the buttons*/
