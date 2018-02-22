@@ -89,7 +89,18 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     //function used in the radio button to save the answer to the selected radio value (eighter true or false based on the current answer correct property)
     $scope.select= function(x){
         $scope.correct = x;
-    }//end of select function    
+    }//end of select function 
+    
+    $scope.animateStreak = function(){
+        $scope.oldStreak = Streak.getStreak();
+        if($scope.oldStreak >= 3){
+            $scope.animateFlipStreak = true;
+        }
+    }
+    
+    $scope.endAnimateStreak = function(){
+        $scope.animateFlipStreak = false;
+    }
     
     //function for the "finish" button. The user press this button after each question.
     $scope.done = function(){
@@ -111,6 +122,8 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             
             //update streak variable 
             $scope.streak = Streak.getStreak();
+            
+            $scope.animateStreak();
         }else {
             // show the incorrect answer celebrations
             $scope.showIncorrectAnswer= true;
@@ -132,14 +145,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.showButtons = false;
         $scope.showCorrectAnswer = false;
         $scope.showIncorrectAnswer = false;
+        $scope.animateFlipStreak = false; //reset the streak flipping animation
         
         //Change the location controller the next number
         Vocabulary.updateCurrentLocation();
             
         if($scope.typeOfTest=="MC"){
-            //get the next vocabulary question and answer    
+            //get the next vocabulary question and answer for mulitple choice    
             $scope.setupIndexCards();            
         }else{
+            // get the next vocabulary questions and answers for fill in the blank
             $scope.setupIndexCardsBlank();
         }
             
@@ -217,6 +232,14 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.multipeChoice();
     }
     
+    $scope.MSChp6MC = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp6();
+        
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();
+    }    
+    
     //setup the practice test as a fill in the blank
     $scope.fillInBlankTest = function(){
         //randomize test questions
@@ -270,7 +293,15 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //set up practice test as a fill in the blank
         $scope.fillInBlankTest();
-    }     
+    }
+    
+    $scope.MSChp6FB = function(){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp6();
+        
+        //set up practice test as a fill in the blank
+        $scope.fillInBlankTest();
+    }    
     
     //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
     $scope.scienceChp2FB = function(){
