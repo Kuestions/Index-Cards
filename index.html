@@ -13,7 +13,8 @@
 <script src="JS/app.js"></script>
     
 <!--CSS -->     
-<link rel="stylesheet" href="indexCards.css">    
+<link rel="stylesheet" href="indexCards.css">
+<link rel="stylesheet" href="libs/animate.css">    
     
 <!--Services -->    
 <script src="JS/vocabularyService.js"></script>
@@ -95,7 +96,7 @@
             </div>
             <!--show student streak -->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign streakColor" ng-show="streak >=3">
-                <h2>STREAK {{streak}}</h2>
+                <h2 class="" ng-class="{'animated flip':animateFlipStreak==true}">STREAK {{streak}}</h2>
             </div>
         </div><!--end of top div containing score and start over button -->
         <!--Row containing Question and answers -->
