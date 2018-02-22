@@ -152,4 +152,13 @@ body {
     min-height: 100%; /*set the css effects to the entire screen*/
     }   
 }
+
+/*Desktop or big screen*/
+@media only screen and (min-width: 500px) {
+
+    div.indexCardCSS {
+        top:200px;/*move landing page box into middle of screen*/
+        box-shadow: 3px 3px 18px ; /*box shadow so it appears above the blue background*/
+    }  
+}
 /*--By Smiley */
