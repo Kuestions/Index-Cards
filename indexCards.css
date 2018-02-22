@@ -57,6 +57,12 @@
     animation-iteration-count: infinite;
 }
 
+div.animated.bounce {
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
 @keyframes blinking {
     0%      {color:green;}
     50%     {color:orange;}
