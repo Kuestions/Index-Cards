@@ -132,7 +132,39 @@ myApp.factory('Data',  function () {
         {"term":"Politician's name for slavery", "correctAnswer":"Peculiar institation"},
         {"term":"Led a raid on the federal arsonal at Harper's Ferry, VA to start a slave rebellion", "correctAnswer":"John Brown"},        
         {"term":"Maine was comitted as a free state adn Missouri as a slave state", "correctAnswer":"Missouri Compromise"}            
-    ];    
+    ];  
+    
+        var MSChp6 = [ 
+        {"term":"After the Civil War, MS faced", "correctAnswer":"Great Challenges"},
+        {"term":"Freedmen", "correctAnswer":"former slaves"}, 
+        {"term":"A new ??? between blacks and whites had to be developed", "correctAnswer":"relationship"},
+        {"term":"Northerners came to the south to establish ??? for the freed slaves", "correctAnswer":"Schools"},
+        {"term":"Teh Freedman's Bureau helped slaves with what 4 things?", "correctAnswer":"Food, Shelter, education, health care"},        
+        {"term":"Percentage of black farmers who owned thier land in 1870?", "correctAnswer":"12%"},
+        {"term":"Lincoln's plan to rebuild the South", "correctAnswer":"Reconstruction"},
+        {"term":"Suffrage", "correctAnswer":"Voting Rights"},
+        {"term":"Before the civil war, blacks were NOT allowed to?", "correctAnswer":"vote"},
+        {"term":"Delegates of teh Constitutional Conventionof 1865 did not want what in MS government", "correctAnswer":"Black participation"},
+        {"term":"Legislators passed 4 acts known as ", "correctAnswer":"Black codes"},             
+        {"term":"The Black codes was design to give the state of MS ???? over blacks", "correctAnswer":"control"},
+        {"term":"Made blacks full citizens of the United States and in the states they live in", "correctAnswer":"14th Admendment"},
+        {"term":"Native whites who supported teh Republican party", "correctAnswer":"Scalawags"},        
+        {"term":"Northern white supporters", "correctAnswer":"carpet baggers"},            
+        {"term":"Extended voting rights to any male citizen regardless of race or color", "correctAnswer":"Universal male suffrage"},            
+        {"term":"To take the right to vote away from an individual or group", "correctAnswer":"disfranchise"},
+        {"term":"White militant group formed to keep blacks from the polls", "correctAnswer":"Klu Klux klan"},
+        {"term":"Guaranted universal male suffrage", "correctAnswer":"15th Amendment"},
+        {"term":"Percentage of white children attended school in MS in 1850", "correctAnswer":"13%"},
+        {"term":"First black senator to preside over a Senate session", "correctAnswer":"Blanche K. Bruce"},
+        {"term":"first institution for women in the United States", "correctAnswer":"Mississippi University for Women"},
+        {"term":"The downfall of the Republicans surrounding the election of 1875 began with", "correctAnswer":"Three years of violence"},
+        {"term":"White Democrats consider themeselves", "correctAnswer":"Redeemers"},
+        {"term":"White MS who wanted to control the state government", "correctAnswer":"Redeemers"},
+        {"term":"Continous speech making to delay an action by a legislative body", "correctAnswer":"Filibuster"},
+        {"term":"Dutch word for filibuster", "correctAnswer":"Pirate"},
+        {"term":"Redrawing the lines in voting districts", "correctAnswer":"Reapportionment"}, 
+        {"term":"The understanding clause's loophole allowed", "correctAnswer":"illiterate whites to register and vote"}         
+    ];       
     
 return {      
             //returns the science chp 1 test terms and answers
@@ -163,7 +195,12 @@ return {
             // returns the mississippi studies chp 5 test terms and answers
             getMSChp5: function() {
                 return MSChp5;
-            }
+            },
+    
+            // returns the mississippi studies chp 6 test terms and answers
+            getMSChp6: function() {
+                return MSChp6;
+            }    
     
         }//end of the return
 });
