@@ -148,7 +148,7 @@ myApp.factory('Data',  function () {
         {"term":"Legislators passed 4 acts known as ", "correctAnswer":"Black codes"},             
         {"term":"The Black codes was design to give the state of MS ???? over blacks", "correctAnswer":"control"},
         {"term":"Made blacks full citizens of the United States and in the states they live in", "correctAnswer":"14th Admendment"},
-        {"term":"Native whites who supported teh Republican party", "correctAnswer":"Scalawags"},        
+        {"term":"Native whites who supported the Republican party", "correctAnswer":"Scalawags"},        
         {"term":"Northern white supporters", "correctAnswer":"carpet baggers"},            
         {"term":"Extended voting rights to any male citizen regardless of race or color", "correctAnswer":"Universal male suffrage"},            
         {"term":"To take the right to vote away from an individual or group", "correctAnswer":"disfranchise"},
