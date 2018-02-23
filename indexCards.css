@@ -73,10 +73,11 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
 }
 
 .continueButton, .actionButtons {
-    margin-top: 10px;
-    letter-spacing: 2px;
+    margin-top: 20px; /*add space between top of continue/finish button and test answers*/
+    letter-spacing: 2px; /*add letter spacing to the text inside the buttons*/
 }
 
+/*CSS for the red restart button at top of each test*/
 .restartButton {
     background-color: red;
 }

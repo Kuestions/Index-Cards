@@ -76,13 +76,13 @@
                 <button type="button" class="MSButton" ng-click="MSChp6FB()">MS Studies Chp. 6 (Fill in Blank)</button>                 
             </div>            
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4" ng-show="finish==true">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 indexCardCSS" ng-show="finish==true">
             <h1>Your Ending Score is {{score | number: 0}}%.</h1>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerAlign">
                 <button type="button" class="btn btn-sm restartButton" ng-click="restart()">Restart</button>
             </div>            
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage===false && fillInBlank===false">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 indexCardCSS" ng-show="finish==false && landingPage===false && fillInBlank===false">
         <!--Top row containing score and start over button -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <!--left section containing the start over button -->
@@ -133,7 +133,7 @@
         </div><!--end of div containing the body of the app-->
         
         <!-- Fill in the Blank Test-->
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6" ng-show="finish==false && landingPage===false && fillInBlank===true">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 indexCardCSS" ng-show="finish==false && landingPage===false && fillInBlank===true">
         <!--Top row containing score and start over button -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <!--left section containing the start over button -->

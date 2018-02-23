@@ -303,26 +303,24 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.fillInBlankTest();
     }    
     
+
     //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
-    $scope.scienceChp2FB = function(){
+    $scope.scienceChp2FB = () => {
         
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getScienceChp2();
         
         //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-        
+        $scope.fillInBlankTest();        
     }
     
-    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
-    $scope.scienceChp4FB = function(){
-        
+    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the fill in the blank test.
+    $scope.scienceChp4FB = () => {
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getScienceChp4();
         
         //set up practice test as a fill in the blank
         $scope.fillInBlankTest();
-        
-    }       
+    }
     
 });//end of indexCardsController
