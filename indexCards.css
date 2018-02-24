@@ -29,12 +29,19 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
     background-color: lightcyan;
 }
 
+/*center align elements*/
 .centerAlign {
     text-align: center;
 }
 
+/*bug fix of label auto indention of answers*/
+.fixLabelIndention {
+    text-indent: 0px;
+}
+
+/*indent radio elements in mulitple choice tests*/
 .radioButtonIndent {
-    text-indent: 5%;
+    text-indent: 15%;
     font-size: 150%;
 }
 
