@@ -167,44 +167,28 @@ myApp.factory('Data',  function () {
     ];       
     
 return {      
-            //returns the science chp 1 test terms and answers
-            getScienceChp1: function() {
-                return scienceChp1;
-            }, //end of getScienceChp1
-    
-            //returns the science chp 2 test terms and answers
-            getScienceChp2: function() {
-                return scienceChp2;
-            }, //end of getScienceChp2
-    
-            //returns the science chp 4 test terms and answers
-            getScienceChp4: function() {
-                return scienceChp4;
-            }, //end of getScienceChp4     
-            
-            // returns the mississippi studies chp 1 test terms and answers
-            getMSChp1: function() {
-                return MSChp1;
-            },
-    
-            // returns the mississippi studies chp 2 test terms and answers
-            getMSChp2: function() {
-                return MSChp2;
-            },
-    
-            // returns the mississippi studies chp 5 test terms and answers
-            getMSChp5: function() {
-                return MSChp5;
-            },
-    
-            // returns the mississippi studies chp 6 test terms and answers
-            getMSChp6: function() {
-                return MSChp6;
-            },
     
             //return requested test
             getData: function(test){
-                return test;
+                //if(test = MSChp6)
+                  //  return MSChp6;
+                switch(test){
+                    case "MSChp6":
+                        return MSChp6;
+                    case "MSChp5":
+                        return MSChp5;
+                    case "MSChp2":
+                        return MSChp2;
+                    case "MSChp1":
+                        return MSChp1;
+                    case "scienceChp4":
+                        return scienceChp4;
+                    case "scienceChp2":
+                        return scienceChp2;
+                    case "scienceChp1":
+                        return scienceChp1;                        
+                }
+                
             }
     
         }//end of the return
