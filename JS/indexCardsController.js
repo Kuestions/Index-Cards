@@ -1,4 +1,4 @@
-myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data, Streak){
+myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data, Streak, TopScore){
 
     //initial score value
     $scope.score = 0;    
@@ -19,11 +19,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     $scope.testData = [];
     
     //initial setup of what type of test ui to show
-    $scope.typeOfTest = "MC";
-    
+    $scope.typeOfTest = "MC";    
     
     //initial variable to show student streak
     $scope.streak = 0;
+    
+    //initial variable that hold test title to use with the topScore service
+    $scope.topScoreTestName = "";
+    
+    //initial variable that is display to the student the highest recorded score for that test
+    $scope.topScore = "";
     
     //sets up the index cards for Multiple Choice test with the backend data
     $scope.setupIndexCards = function(){    
@@ -91,6 +96,7 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.correct = x;
     }//end of select function 
     
+    //retrieve the old streak number. If more then 3, then show the animated streak feature
     $scope.animateStreak = function(){
         $scope.oldStreak = Streak.getStreak();
         if($scope.oldStreak >= 3){
@@ -98,6 +104,7 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         }
     }
     
+    //method to end the streak feature if user choose incorrectly
     $scope.endAnimateStreak = function(){
         $scope.animateFlipStreak = false;
     }
@@ -123,6 +130,7 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             //update streak variable 
             $scope.streak = Streak.getStreak();
             
+            //show the animated streak feature if 3 or more correct answers
             $scope.animateStreak();
         }else {
             // show the incorrect answer celebrations
@@ -140,23 +148,27 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     
     $scope.continue = function(){
         if($scope.currentQuestionNumber >= $scope.endOfTest){
+            //switch the student view from the test to the final score screen
             $scope.finish = true;
-        }else {    
-        $scope.showButtons = false;
-        $scope.showCorrectAnswer = false;
-        $scope.showIncorrectAnswer = false;
-        $scope.animateFlipStreak = false; //reset the streak flipping animation
-        
-        //Change the location controller the next number
-        Vocabulary.updateCurrentLocation();
             
-        if($scope.typeOfTest=="MC"){
-            //get the next vocabulary question and answer for mulitple choice    
-            $scope.setupIndexCards();            
-        }else{
-            // get the next vocabulary questions and answers for fill in the blank
-            $scope.setupIndexCardsBlank();
-        }
+            //saved the current test score to the local storage
+            TopScore.setTestScores($scope.topScoreTestName,$scope.score);
+        }else {    
+            $scope.showButtons = false;
+            $scope.showCorrectAnswer = false;
+            $scope.showIncorrectAnswer = false;
+            $scope.animateFlipStreak = false; //reset the streak flipping animation
+
+            //Change the location controller the next number
+            Vocabulary.updateCurrentLocation();
+
+            if($scope.typeOfTest=="MC"){
+                //get the next vocabulary question and answer for mulitple choice    
+                $scope.setupIndexCards();            
+            }else{
+                // get the next vocabulary questions and answers for fill in the blank
+                $scope.setupIndexCardsBlank();
+            }
             
         }//end of else statement
     }//end of continue function
@@ -164,6 +176,25 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     //restart the app by reloading the browser page
     $scope.restart = function(){
         location.reload();
+    }
+    
+    $scope.loadTest = function(requestedTest, testType){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getData(requestedTest)
+        
+        //assign test name to variable to use with topScore service feature
+        $scope.topScoreTestName = requestedTest;
+        
+        //if a score is already set, assign and display to student
+        $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);        
+console.log($scope.topScore);        
+        //Test if type of test is multiple choice or fill in the blank
+        if(testType="MC")
+            //set up practice test as a multiple choice
+            $scope.multipeChoice();
+        else
+            //set up practice test as a fill in the blank
+            $scope.fillInBlankTest();
     }
     
     //function to setup a multiple choice test
@@ -179,66 +210,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         //Change the app UI screen from the landing page to the Q & A.
         $scope.landingPage = false;
         
+        // assign the type of test to mulitple choice
         $scope.typeOfTest = "MC";        
     }
-    
-    $scope.scienceChp1MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp1();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }
-    
-    //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the multiple choice test.
-    $scope.scienceChp2MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp2();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }
-    
-    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the multiple choice test.
-    $scope.scienceChp4MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp4();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }      
-    
-    $scope.MSChp1MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp1();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }
-    
-    $scope.MSChp2MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp2();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }
-    
-    $scope.MSChp5MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp5();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }
-    
-    $scope.MSChp6MC = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp6();
-        
-        //set up practice test as a multiple choice
-        $scope.multipeChoice();
-    }    
     
     //setup the practice test as a fill in the blank
     $scope.fillInBlankTest = function(){
@@ -259,68 +233,6 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         
         //change the type of test ui to show
         $scope.typeOfTest = "FB";        
-    }
-    
-    $scope.scienceChp1FB = function(){
-        
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp1();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-        
-    }
-    
-    $scope.MSChp1FB = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp1();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-    }
-    
-    $scope.MSChp2FB = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp2();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-    }
-    
-    $scope.MSChp5FB = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp5();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-    }
-    
-    $scope.MSChp6FB = function(){
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getMSChp6();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
-    }    
-    
-
-    //method to retrived and assign chp. 2 science terms to the global $scope.testData array. This array is used in the fill in the blank test.    
-    $scope.scienceChp2FB = () => {
-        
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp2();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();        
-    }
-    
-    //method to retrived and assign chp. 4 science terms to the global $scope.testData array. This array is used in the fill in the blank test.
-    $scope.scienceChp4FB = () => {
-        //gets the vocabulary terms from the Data service to be loaded into the app.
-        $scope.testData = Data.getScienceChp4();
-        
-        //set up practice test as a fill in the blank
-        $scope.fillInBlankTest();
     }
     
 });//end of indexCardsController

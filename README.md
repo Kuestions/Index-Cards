@@ -1,9 +1,9 @@
 # Index Cards
 <hr>
 
-Screen Shots:
-![Picture](assets/Index%20Cards%20Q&A-200.png)![Picture](assets/Index%20Cards%20Q&A-Good.png) 
+### Screen Shots:
 ![Picture](assets/Index%20Cards%20Landing%20Page-400.png) 
+![Picture](assets/Index%20Cards%20Q&A-Good.png) 
 
 ### Table of Contents
 1.	Project Demo Link
@@ -11,7 +11,8 @@ Screen Shots:
 3.	Motivation
 4.  Objectives
 5.	Example of Use
-6.	Technologies Used
+6.  Features
+7.	Technologies Used
 
 ### Project Demo Link: [Index Cards App](https://jcsmileyjr.github.io/Index-Cards/)
 
@@ -26,7 +27,7 @@ I determine the solution is an online version of this simple but effective learn
 ### Objectives:
 * The online test will allow multiple choice but have an option for a harder matching version.
 * The online test would show a constant grade for feedback.
-* The online test should show the correct answer if she chooses incorrectly.
+* The online test should show the correct answer if the student chooses incorrectly.
 * Bonus if the test can be reuse weeks later to study for final exams.
 
 ### Example of Use:
@@ -36,6 +37,13 @@ I determine the solution is an online version of this simple but effective learn
 3.	Press the “Finish” button to confirm if the answer is correct.
 4.	Press reviewing the results, press the “Done” button to continue to the next question. 
 5.	When all questions is completed a final score is shown and user is taken back to the landing page.
+
+### Features:
+* Hot streak: Celebration of student answering multiple questions correctly
+* Beat your Top Score: Display the highest score the student achevied for that test
+* 2 types of tests: Multiple Choice and Fill in the Blank
+* Display current score
+* Show correct answers to all questions
 
 ### This app was built with the following technologies:
 
@@ -47,7 +55,7 @@ I determine the solution is an online version of this simple but effective learn
  
  **JavaScript:** object-oriented programming language for web pages
  
- **HTML:** Mark-up language for creating web pages
+ **HTML5:** Mark-up language for creating web pages and local storage of data in the browser
  
  **CSS:** A formatting language for styling web pages
 

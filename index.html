@@ -20,6 +20,7 @@
 <script src="JS/vocabularyService.js"></script>
 <script src="JS/scoreService.js"></script>
 <script src="JS/streakService.js"></script>
+<script src="JS/topScoreService.js"></script>
     
 <!--Navigation files -->    
 <script src="JS/indexCardsController.js"></script>
@@ -50,30 +51,30 @@
             <!--Left side of landing page, Science section -->
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">                
                 <!--Chp. 1 science tests -->
-                <button type="button" class="scienceButton" ng-click="scienceChp1MC()">Science Chp. 1 (Multi-Choice)</button> 
-                <button type="button" class="scienceButton" ng-click="scienceChp1FB()">Science Chp. 1 (Fill in Blank)</button>
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp1','MS')">Science Chp. 1 (Multi-Choice)</button> 
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp1','FB')">Science Chp. 1 (Fill in Blank)</button>
                 <hr>                
                 <!--Chp. 2 science tests -->
-                <button type="button" class="scienceButton" ng-click="scienceChp2MC()">Science Chp. 2 (Multi-Choice)</button> 
-                <button type="button" class="scienceButton" ng-click="scienceChp2FB()">Science Chp. 2 (Fill in Blank)</button>
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp2','MS')">Science Chp. 2 (Multi-Choice)</button> 
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp2','FB')">Science Chp. 2 (Fill in Blank)</button>
                 <hr>                
                 <!--Chp. 4 science tests -->
-                <button type="button" class="scienceButton" ng-click="scienceChp4MC()">Science Chp. 4 (Multi-Choice)</button> 
-                <button type="button" class="scienceButton" ng-click="scienceChp4FB()">Science Chp. 4 (Fill in Blank)</button>                 
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp4','MS')">Science Chp. 4 (Multi-Choice)</button> 
+                <button type="button" class="scienceButton" ng-click="loadTest('scienceChp4','FB')">Science Chp. 4 (Fill in Blank)</button> 
             </div>
             <!--Right side of landing page, Mississippi Studies section -->
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">                
-                <button type="button" class="MSButton" ng-click="MSChp1MC()">MS Studies Chp. 1 (Multi-Choice)</button>
-                <button type="button" class="MSButton" ng-click="MSChp1FB()">MS Studies Chp. 1 (Fill in Blank)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp1','MS')">MS Studies Chp. 1 (Multi-Choice)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp1','FB')">MS Studies Chp. 1 (Fill in Blank)</button>
                 <hr>                
-                <button type="button" class="MSButton" ng-click="MSChp2MC()">MS Studies Chp. 2 (Multi-Choice)</button>
-                <button type="button" class="MSButton" ng-click="MSChp2FB()">MS Studies Chp. 2 (Fill in Blank)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp2','MS')">MS Studies Chp. 2 (Multi-Choice)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp2','FB')">MS Studies Chp. 2 (Fill in Blank)</button>
                 <hr>                
-                <button type="button" class="MSButton" ng-click="MSChp5MC()">MS Studies Chp. 5 (Multi-Choice)</button>
-                <button type="button" class="MSButton" ng-click="MSChp5FB()">MS Studies Chp. 5 (Fill in Blank)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp5','MS')">MS Studies Chp. 5 (Multi-Choice)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp5','FB')">MS Studies Chp. 5 (Fill in Blank)</button>
                 <hr>                
-                <button type="button" class="MSButton" ng-click="MSChp6MC()">MS Studies Chp. 6 (Multi-Choice)</button>
-                <button type="button" class="MSButton" ng-click="MSChp6FB()">MS Studies Chp. 6 (Fill in Blank)</button>                 
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp6','MS')">MS Studies Chp. 6 (Multi-Choice)</button>
+                <button type="button" class="MSButton" ng-click="loadTest('MSChp6', 'FB')">MS Studies Chp. 6 (Fill in Blank)</button>                 
             </div>            
         </div>
         <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 indexCardCSS" ng-show="finish==true">
@@ -130,7 +131,13 @@
             <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> {{negativeFeedBack}} <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
         
         </div>
-        </div><!--end of div containing the body of the app-->
+        <!--section for Top Score Feature-->    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <br>
+            <h4 class="centerAlign">Beat Your Highest Score</h4>
+            <h4 class="centerAlign">{{topScore | number: 0}}%</h4>
+        </div> 
+        </div><!--end of div containing Multiple choice test -->
         
         <!-- Fill in the Blank Test-->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 indexCardCSS" ng-show="finish==false && landingPage===false && fillInBlank===true">
