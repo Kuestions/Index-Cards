@@ -1,4 +1,4 @@
-myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data, Streak){
+myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Data, Streak, TopScore){
 
     //initial score value
     $scope.score = 0;    
@@ -19,11 +19,16 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     $scope.testData = [];
     
     //initial setup of what type of test ui to show
-    $scope.typeOfTest = "MC";
-    
+    $scope.typeOfTest = "MC";    
     
     //initial variable to show student streak
     $scope.streak = 0;
+    
+    //initial variable that hold test title to use with the topScore service
+    $scope.topScoreTestName = "";
+    
+    //initial variable that is display to the student the highest recorded score for that test
+    $scope.topScore = "";
     
     //sets up the index cards for Multiple Choice test with the backend data
     $scope.setupIndexCards = function(){    
@@ -140,23 +145,27 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     
     $scope.continue = function(){
         if($scope.currentQuestionNumber >= $scope.endOfTest){
+            //switch the student view from the test to the final score screen
             $scope.finish = true;
-        }else {    
-        $scope.showButtons = false;
-        $scope.showCorrectAnswer = false;
-        $scope.showIncorrectAnswer = false;
-        $scope.animateFlipStreak = false; //reset the streak flipping animation
-        
-        //Change the location controller the next number
-        Vocabulary.updateCurrentLocation();
             
-        if($scope.typeOfTest=="MC"){
-            //get the next vocabulary question and answer for mulitple choice    
-            $scope.setupIndexCards();            
-        }else{
-            // get the next vocabulary questions and answers for fill in the blank
-            $scope.setupIndexCardsBlank();
-        }
+            //saved the current test score to the local storage
+            TopScore.setTestScores($scope.topScoreTestName,$scope.score);
+        }else {    
+            $scope.showButtons = false;
+            $scope.showCorrectAnswer = false;
+            $scope.showIncorrectAnswer = false;
+            $scope.animateFlipStreak = false; //reset the streak flipping animation
+
+            //Change the location controller the next number
+            Vocabulary.updateCurrentLocation();
+
+            if($scope.typeOfTest=="MC"){
+                //get the next vocabulary question and answer for mulitple choice    
+                $scope.setupIndexCards();            
+            }else{
+                // get the next vocabulary questions and answers for fill in the blank
+                $scope.setupIndexCardsBlank();
+            }
             
         }//end of else statement
     }//end of continue function
@@ -164,6 +173,20 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     //restart the app by reloading the browser page
     $scope.restart = function(){
         location.reload();
+    }
+    
+    $scope.loadTest = function(requestedTest, type){
+        //gets the vocabulary terms from the Data service to be loaded into the app.
+        $scope.testData = Data.getMSChp6();
+        
+        //assign test name to variable to use with topScore service feature
+        $scope.topScoreTestName = "MSChp6MC";
+        
+        //if a score is already set, assign and display to student
+        $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);        
+        
+        //set up practice test as a multiple choice
+        $scope.multipeChoice();        
     }
     
     //function to setup a multiple choice test
@@ -235,6 +258,12 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     $scope.MSChp6MC = function(){
         //gets the vocabulary terms from the Data service to be loaded into the app.
         $scope.testData = Data.getMSChp6();
+        
+        //assign test name to variable to use with topScore service feature
+        $scope.topScoreTestName = "MSChp6MC";
+        
+        //if a score is already set, assign and display to student
+        $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);        
         
         //set up practice test as a multiple choice
         $scope.multipeChoice();

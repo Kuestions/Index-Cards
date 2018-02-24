@@ -20,6 +20,7 @@
 <script src="JS/vocabularyService.js"></script>
 <script src="JS/scoreService.js"></script>
 <script src="JS/streakService.js"></script>
+<script src="JS/topScoreService.js"></script>
     
 <!--Navigation files -->    
 <script src="JS/indexCardsController.js"></script>
@@ -130,7 +131,13 @@
             <span ng-show="showIncorrectAnswer==true" class=""><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i><i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i> {{negativeFeedBack}} <i class="fa fa-thumbs-o-down" aria-hidden="true" style="color:blue"></i><i class="fa fa-frown-o" aria-hidden="true" style="background-color:yellow"></i></span>            
         
         </div>
-        </div><!--end of div containing the body of the app-->
+        <!--section for Top Score Feature-->    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <br>
+            <h4 class="centerAlign">Beat Your Highest Score</h4>
+            <h4 class="centerAlign">{{topScore | number: 0}}%</h4>
+        </div> 
+        </div><!--end of div containing Multiple choice test -->
         
         <!-- Fill in the Blank Test-->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 indexCardCSS" ng-show="finish==false && landingPage===false && fillInBlank===true">

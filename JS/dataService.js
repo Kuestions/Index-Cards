@@ -200,7 +200,12 @@ return {
             // returns the mississippi studies chp 6 test terms and answers
             getMSChp6: function() {
                 return MSChp6;
-            }    
+            },
+    
+            //return requested test
+            getData: function(test){
+                return test;
+            }
     
         }//end of the return
 });
