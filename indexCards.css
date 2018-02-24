@@ -82,19 +82,22 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
     background-color: red;
 }
 
+/*set the color of the element. Set up the animation*/
 .streakColor {
     color: green;
-    animation-name: blinking;
+    animation-name: blinking; /*name of animation. Use with keyframes to change css at intervals*/
     animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; /*animation will run in a loop*/
 }
 
+/*use with the animate.css javascript libary to control the bouncing of the buttons*/
 div.animated.bounce {
     animation-duration: 5s;
     animation-delay: 5s;
     animation-iteration-count: infinite;
 }
 
+/*set the interval changes to the CSS of the blinking named animation*/
 @keyframes blinking {
     0%      {color:green;}
     50%     {color:orange;}

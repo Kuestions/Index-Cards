@@ -1,9 +1,9 @@
 # Index Cards
 <hr>
 
-Screen Shots:
-![Picture](assets/Index%20Cards%20Q&A-200.png)![Picture](assets/Index%20Cards%20Q&A-Good.png) 
+### Screen Shots:
 ![Picture](assets/Index%20Cards%20Landing%20Page-400.png) 
+![Picture](assets/Index%20Cards%20Q&A-Good.png) 
 
 ### Table of Contents
 1.	Project Demo Link
