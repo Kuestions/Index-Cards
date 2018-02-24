@@ -51,6 +51,7 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
 
 .celebratrionIconSize {
     font-size:  210%;
+    padding-top: 10px;       
 }
 
 .highlightAnswer {
@@ -79,7 +80,7 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
     color: white;    
 }
 
-.continueButton, .actionButtons {
+ .continueButton, .actionButtons, .celebratrionIconSize {
     margin-top: 20px; /*add space between top of continue/finish button and test answers*/
     letter-spacing: 2px; /*add letter spacing to the text inside the buttons*/
 }
