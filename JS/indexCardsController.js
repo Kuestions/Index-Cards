@@ -30,6 +30,9 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     //initial variable that is display to the student the highest recorded score for that test
     $scope.topScore = "";
     
+    //set up flashing score as false
+    $scope.flashingScore = false;
+    
     //sets up the index cards for Multiple Choice test with the backend data
     $scope.setupIndexCards = function(){    
         
@@ -143,7 +146,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             $scope.streak = Streak.getStreak();            
         }
         //update the score
-        $scope.score = Score.getScore();        
+        $scope.score = Score.getScore();
+        
+        //student score start flashing
+        $scope.flashingScore = true;
     }//end of done function
     
     $scope.continue = function(){
@@ -158,6 +164,7 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
             $scope.showCorrectAnswer = false;
             $scope.showIncorrectAnswer = false;
             $scope.animateFlipStreak = false; //reset the streak flipping animation
+            $scope.flashingScore = false; //reset the flashing score animation
 
             //Change the location controller the next number
             Vocabulary.updateCurrentLocation();

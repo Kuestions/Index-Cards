@@ -91,7 +91,7 @@
                 <button type="button" class="btn btn-sm restartButton" ng-click="restart()">RESTART</button>
             </div>
             <!--right section containing the score -->
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize" ng-class="{'scoreColor':flashingScore==true}">
                 <p>Score {{score | number: 0}}%</p>
             </div>
             <!--show student streak -->
@@ -148,7 +148,7 @@
                 <button type="button" class="btn btn-sm restartButton" ng-click="restart()">RESTART</button>
             </div>
             <!--right section containing the score -->
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 scoreSize" ng-class="{'scoreColor':flashingScore==true}">
                 <p >Score {{score | number: 0}}%</p>
             </div>
             <!--show student streak -->

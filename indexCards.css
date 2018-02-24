@@ -85,7 +85,7 @@ select {
     background-color: red;
 }
 
-/*set the color of the element. Set up the animation*/
+/*set the color of the streak feature element. Set up the animation*/
 .streakColor {
     color: green;
     animation-name: blinking; /*name of animation. Use with keyframes to change css at intervals*/
@@ -105,6 +105,14 @@ div.animated.bounce {
     0%      {color:green;}
     50%     {color:orange;}
     100%    {color: navy;}
+}
+
+/*set the color of the score element. Set up the animation*/
+.scoreColor {
+    color: green;
+    animation-name: blinking; /*name of animation. Use with keyframes to change css at intervals*/
+    animation-duration: 1.5s;
+    animation-iteration-count: 5; /*animation will run in a loop*/
 }
 
 
