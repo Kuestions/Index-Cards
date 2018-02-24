@@ -189,11 +189,11 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);        
        
         //Test if type of test is multiple choice or fill in the blank
-        if(testType="MC")            
+        if(testType=='MS')            
             //set up practice test as a multiple choice
             $scope.multipeChoice();
         
-        if(testType="FB")
+        if(testType=='FB')
             //set up practice test as a fill in the blank
             $scope.fillInBlankTest();
     }
