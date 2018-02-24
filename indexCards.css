@@ -1,15 +1,3 @@
-/* float Index Card above background 
-tip: http://www.corelangs.com/css/box/ontop.html
-parent: as relative
-child: as absolute
-Both: use top and left;
-Use z-index: parent a 1, child a 2
-
-also
-
-Give child a exact width and height, fixed position, top and left 50%
-*/
-
 /* Create index card image of white with horizontal lines
 Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizontal-rule
 */
@@ -49,11 +37,17 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
     font-size: 230%;
 }
 
+select {
+    font-size: 150%
+}
+
+/*CSS for encouragement text to student */
 .celebratrionIconSize {
     font-size:  210%;
     padding-top: 10px;       
 }
 
+/*change the size and color of the mulitple choice answers after student press continue button*/
 .highlightAnswer {
     font-size: 200%;
     color: green;
@@ -65,6 +59,7 @@ Solution from https://stackoverflow.com/questions/9468153/textarea-with-horizont
     height: 2.3vh;
 }
 
+/*main color of the app's text and background color*/
 .mainColors {
     color: navy;
     background-color: lightcyan;
