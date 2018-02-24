@@ -157,7 +157,11 @@ body {
     line-height: 31px;
     padding: 8px 10px; 
     min-height: 100%; /*set the css effects to the entire screen*/
-    }   
+    }
+    
+    select {
+        font-size: 110%;
+    }
 }
 
 /*Desktop or big screen*/
