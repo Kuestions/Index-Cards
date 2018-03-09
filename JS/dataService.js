@@ -187,7 +187,7 @@ myApp.factory('Data',  function () {
 		{"term":"Define Matter", "correctAnswer":"Anything that has mass and volume"},
 		{"term":"What is the building blocks of matter?", "correctAnswer":"Atoms"},
 		{"term":"How can matter be classified?", "correctAnswer":"By physical and chemical properties"},
-		{"term":"Why are carbon and copper classified as elements?", "correctAnswer":"On the periodic table"},
+		{"term":"Why are carbon and copper classified as elements?", "correctAnswer":"Made from a single type of atom"},
 		{"term":"How are elements related to compounds?", "correctAnswer":"Compounds: 2 or more elements together"},
 		{"term":"What is the difference between a pure substance and a mixture?", "correctAnswer":"Pure substances: elements or compound, Mixture: heterogeneous or homogenous"},
 		{"term":"Which of these results in a mixture? Baking cake, burning wood, making Jell-O, or digesting food?", "correctAnswer":"Making Jell-O"},
