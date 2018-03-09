@@ -164,7 +164,94 @@ myApp.factory('Data',  function () {
         {"term":"Dutch word for filibuster", "correctAnswer":"Pirate"},
         {"term":"Redrawing the lines in voting districts", "correctAnswer":"Reapportionment"}, 
         {"term":"The understanding clause's loophole allowed", "correctAnswer":"illiterate whites to register and vote"}         
-    ];       
+    ];
+    
+    var science9wks = [
+
+        {"term":"What is a scientific hypothesis and how should a good one be written", "correctAnswer":"Must be stated in a way that is testable. A statement is considered “testable” if evidence can be collected that either does or does not support it"},
+		{"term":"If the hypothesis is unsupported, is this a bad thing? Explain", "correctAnswer":"No, because it’s based on your opinion"},
+		{"term":"Which variable in an experiment does the scientist manipulate?", "correctAnswer":"Independent variable"},
+		{"term":"Which variable in an experiment is measured?", "correctAnswer":"Dependent variable"},
+		{"term":"Which is the independent or dependent variables in the following observation? What effect does temperature have on Fungus growth in plants?", "correctAnswer":"ID= temp, DV= fungus growth"},
+		{"term":"Put these steps of the scientific method in the correct order: Experiment, Retest, Observation, Conclusion, Hypothesis, Data", "correctAnswer":"Observe, Hypothesis, Experiment, Data, Conclusion, Retest"},
+		{"term":"Write the scientific notation for the following numbers: 0.00053, 8720000?", "correctAnswer":"5.3 x 10(-4), 8.72 x 10(6)"},
+		{"term":"What is precision?", "correctAnswer":"The quality, condition, or facts of begin exact and accurate"},
+		{"term":"What is accuracy?", "correctAnswer":"A description of how close a measurement is to the true value of the quantity measured"},
+		{"term":"Skip", "correctAnswer":"Skip"},
+		{"term":"Convert 2,550 grams to kilograms", "correctAnswer":"2.550kg"},
+		{"term":"Which SI prefix means 1/100 or .01?", "correctAnswer":"Centi"},
+		{"term":"What unit of measurement is mass measured in?", "correctAnswer":"Grams"},
+		{"term":"The best type of graph is best for showing data over time?", "correctAnswer":"Bar graph"},
+		{"term":"The line created by the liquid in a graduated cylinder is known as the?", "correctAnswer":"Meniscus"},
+		{"term":"Skip", "correctAnswer":"Skip"},
+		{"term":"Define Matter", "correctAnswer":"Anything that has mass and volume"},
+		{"term":"What is the building blocks of matter?", "correctAnswer":"Atoms"},
+		{"term":"How can matter be classified?", "correctAnswer":"By physical and chemical properties"},
+		{"term":"Why are carbon and copper classified as elements?", "correctAnswer":"On the periodic table"},
+		{"term":"How are elements related to compounds?", "correctAnswer":"Compounds: 2 or more elements together"},
+		{"term":"What is the difference between a pure substance and a mixture?", "correctAnswer":"Pure substances: elements or compound, Mixture: heterogeneous or homogenous"},
+		{"term":"Which of these results in a mixture? Baking cake, burning wood, making Jell-O, or digesting food?", "correctAnswer":"Making Jell-O"},
+		{"term":"Why are color, volume, and density classified as physical properties?", "correctAnswer":"Because they are properties that can be observed without changing"},
+		{"term":"Why are flammability and reactivity classified as chemical properties?", "correctAnswer":"Irreversible- new substance a format"},
+		{"term":"Why is getting a hair-cut an example of a physical change?", "correctAnswer":"Because it’s still hair, just change the physical look of it"},
+		{"term":"A release of energy is a sign of what type of change? Chemical or physical", "correctAnswer":"Chemical"},
+		{"term":"List the signs of a chemical reaction that were given in your notes or from the book?", "correctAnswer":"Burn, rust, decompose, explode"},
+		{"term":"Which of these is an example of chemical change? Salt dissolving, dying hair, wine fermenting, or making Kool-Aid?", "correctAnswer":"Wine fermenting"},
+		{"term":"Is fizzing a sign of a physical or chemical change?", "correctAnswer":"Chemical"},
+		{"term":"What is the difference between a homogeneous and heterogeneous mixture?", "correctAnswer":"Homo: same all the way, Heter: mixed substance all throughout"},
+		{"term":"What is the difference between a solid, a liquid, and a gas?", "correctAnswer":"States of matter"},
+		{"term":"Which state of mater cannot hold its shape without a container?", "correctAnswer":"Liquid"},
+		{"term":"Why do we use models to represent atom?", "correctAnswer":"Because atoms are so small"},
+		{"term":"What does the Law of Conservation of Matter state?", "correctAnswer":"Matter can neither be created or destroyed"},
+		{"term":"What are the two regions of the atom? What charge odes each hold?", "correctAnswer":"Nucleus (+) electron cloud (-)"},
+		{"term":"Overall, what is the charge of an atom?", "correctAnswer":"Neutral"},
+		{"term":"Which region of the atom accounts for the mass? Which accounts for Volume?", "correctAnswer":"Mass-nucleus, V-electron cloud"},
+		{"term":"How does the size of electrons compare to the size of the protons and neutrons?", "correctAnswer":"Smaller"},
+		{"term":"Which subatomic particle identifies the element?", "correctAnswer":"Protons"},
+		{"term":"Which subatomic particle determines the charge of the element?", "correctAnswer":"Electrons"},
+		{"term":"Which subatomic particles are inside the nucleus?", "correctAnswer":"Protons and neutrons"},
+		{"term":"What cause the differences in the masses of each of the following?Ne-20, Ne-21, Ne-22", "correctAnswer":"Electrons"},
+		{"term":"Using the following example, determine the number of protons plus neutrons?  71Ga31 or Top: 71, bottom: 31, Element: Ga   ", "correctAnswer":"31"},
+		{"term":"How many atoms would be in this compound? 3AI253  ", "correctAnswer":"9"},
+		{"term":"Define the “aufbau” principle", "correctAnswer":"Arrangement of electrons in an atom"},
+		{"term":"Define the Pauli Exclusion Principle", "correctAnswer":"In an atom or molecule, no"},
+		{"term":"Define the Hund’s Rule", "correctAnswer":"Each orbital must have one  electron before another may have a second electron"},
+		{"term":"Electrons have a  _____ Charge", "correctAnswer":"Negative"},
+		{"term":"A proton have a  _____ Charge", "correctAnswer":"Positive"},
+		{"term":"Neutrons have a _______ charge", "correctAnswer":"No charge"},
+		{"term":"Why do isotopes of the same element have different atomic masses?", "correctAnswer":"Different number of electrons"},
+		{"term":"How do you find the number of neutrons in an atom?", "correctAnswer":"Mass # atomic #"},
+		{"term":"Who discovered the nucleus of the atom?", "correctAnswer":"Rutherford"},
+		{"term":"Who discovered the electrons of the atom and came up with the Plum Pudding Model?", "correctAnswer":"JJ Thomson"},
+		{"term":"What are the four types of orbitals?", "correctAnswer":"S, P, D, F"},
+		{"term":"How many electrons can one orbital hold", "correctAnswer":"S2"},
+		{"term":"How many electrons, total, can the s orbital hold? P orbitals? D orbitals? F orbitals", "correctAnswer":"S – 2, P =6, D=10, F= 14"},
+		{"term":"What is the shape of the s orbital? P orbitals? D orbitals?", "correctAnswer":"S= Sphere, p = dumbbell, d = flower"},
+		{"term":"How are the energy levels of an atom filled?", "correctAnswer":"Lowest first opposite filling before going to next orbital"},
+		{"term":"What does ground state mean?", "correctAnswer":"Lowest energy level"},
+		{"term":"How does the energy of an electron change as the electron moves farther away from the nucleus?", "correctAnswer":"High energy"},
+		{"term":"What does a photon give off?", "correctAnswer":"Light"},
+		{"term":"How did Mendeleev arrange the elements in his periodic table?", "correctAnswer":"Increasing atomic number and their chemical and physical properties"},
+		{"term":"How are elements arranged in the modern PT?", "correctAnswer":"Energy levels and  amities"},
+		{"term":"Why do elements within a group of the PT have similar chemical properties?", "correctAnswer":"Because they are a part of the same family"},
+		{"term":"What do the periods of the Periodic Table also represent?", "correctAnswer":"Energy levels"},
+		{"term":"What happens to an atom that gains or loses electrons?", "correctAnswer":"Gain: negative ion, Loses: positive ions"},
+		{"term":"How are positively charged ions formed?", "correctAnswer":"Loses and electrons"},
+		{"term":"What are the 3 main classes of elements", "correctAnswer":"Metals, non-metals, metalloids"},
+		{"term":"Which class of elements are mostly gases at room temperature or brittle if solid?", "correctAnswer":"Non-metals"},
+		{"term":"Which class of elements are poor conductors?", "correctAnswer":"Non-metals"},
+		{"term":"Which class of elements are good conductors?", "correctAnswer":"Metals"},
+		{"term":"What is another name for a group?", "correctAnswer":"Family"},
+		{"term":"Which metals are in group 1?", "correctAnswer":"alkali metals (check if correct)"},
+		{"term":"Which metals are in group 2?", "correctAnswer":"alkaline Earth metals"},
+		{"term":"What nonmetals are in group 17?", "correctAnswer":"Iodine, Bromine, calcine, fluorine"},
+		{"term":"What nonmetals are in group 2?", "correctAnswer":"All in group 2"},
+		{"term":"What is a valence electron", "correctAnswer":"Electron in the STP orbital and the outer most energy shell"},
+		{"term":"How many valance electrons do most atoms need to become stable?", "correctAnswer":"0"},
+		{"term":"How many electrons does oxygen gain to become stable?", "correctAnswer":"2"},
+		{"term":"What is the group name for teh elements who are already stable and do not react with other elements>", "correctAnswer":"Noba gases"},
+		{"term":"What are the 8 metalloid/semi-conductors?", "correctAnswer":"Beron, silicon, arsenic, pelluniam, asative, antimay, germanium, aluminum"}
+    ];    
     
 return {      
     
@@ -186,7 +273,9 @@ return {
                     case "scienceChp2":
                         return scienceChp2;
                     case "scienceChp1":
-                        return scienceChp1;                        
+                        return scienceChp1; 
+                    case "science9wks":
+                        return science9wks;
                 }
                 
             }

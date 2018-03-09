@@ -120,7 +120,7 @@ div.animated.bounce {
 /*Landing Page CSS*/
 
 /*Set the landing page button's text color, margin between buttons, box shadow,width size of display, and round out the buttons*/
-.scienceButton, .MSButton {
+.scienceButton, .MSButton, .nineWeeksTest {
     width: 100%;
     color: black;/*button text color*/
     margin-top: 10px; /*space at the top between buttons*/
@@ -137,6 +137,12 @@ div.animated.bounce {
 /*make all mississippi study buttons plum color*/
 .MSButton {
     background-color: plum;
+}
+
+/*CSS for 9 weeks test*/
+.nineWeeksTest {
+    color: white;
+    background-color: navy;
 }
 
 /*Word spacing for the title*/
