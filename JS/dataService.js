@@ -42,6 +42,33 @@ myApp.factory('Data',  function () {
         {"term":"when rocks is harden down ", "correctAnswer":"Mechanical Weathering"},
         {"term":"when the actual chemical makeup of the rocks has changed", "correctAnswer":"chemical weathering"},
         {"term":"the movement of weathered sediment such as gravel, soil, and sand. The cause of erosion are water, wind, and glaciers", "correctAnswer":"erosions"}        
+    ];
+    
+    //test array containing vocabulary words as terms and definitions as correctAnswer
+    var worldGeoChp2 = [
+        {"term":"Turning of the earth on its own axis", "correctAnswer":"Rotation"}, 
+        {"term":"It takes 365 1/2 days for the earth to orbit around the sun", "correctAnswer":"Revolutioin"}, 
+        {"term":"An extra day making once every 4 years have 365 days", "correctAnswer":"Leap year"}, 
+        {"term":"two times a year the sun is directly over the Tropic of Cancer (summer) and capricorn (winter). ", "correctAnswer":"Solstice"},
+        {"term":"two times a year (spring and fall ) when day and night are equal length through out the world.", "correctAnswer":"Equinox"},
+        {"term":"is the rise in earth's temperture caused by increasing amounts", "correctAnswer":"Global warming"},
+        {"term":"use renewable energy(solor wing)", "correctAnswer":"Prevent Global warming"}        
+    ];   
+    
+    //test array containing vocabulary words as terms and definitions as correctAnswer
+    var worldGeoChp3 = [
+        {"term":"the study of population", "correctAnswer":"Demography"}, 
+        {"term":"an be caculated by the total population divided by the regions land area", "correctAnswer":"Population density"}, 
+        {"term":"object that makes such food, architecture, art, etc. ", "correctAnswer":"Material Culture"}, 
+        {"term":"ideas such as religion, language, spiritual beliefs, government systems, etc.", "correctAnswer":"Non-material culture"},
+        {"term":"worship of one God", "correctAnswer":"Monotheism"},
+        {"term":"worship of multiple gods", "correctAnswer":"Polytheism"},
+        {"term":"Is the tendency for cultures to become more alike as they share technology and organizational structure", "correctAnswer":"Cultureal Covergence"},
+        {"term":"When a cultural element is transmitted from one group to another", "correctAnswer":"Diffusion"}, 
+        {"term":"4 charateristics that define a country", "correctAnswer":"clearly defined territory, population, sovereignty, government"}, 
+        {"term":"a nation's freedom from outside control ", "correctAnswer":"Sovereignty"}, 
+        {"term":"one central goverenment that runs a nation", "correctAnswer":"unitary system"},
+        {"term":"Some power are given to the nation government and some are restricted to the local government", "correctAnswer":"Federation"}
     ];     
     
 return {      
@@ -53,6 +80,10 @@ return {
                         return scienceChp5;
                     case "worldGeoChp1":
                         return worldGeoChp1;
+                    case "worldGeoChp2":
+                        return worldGeoChp2;
+                    case "worldGeoChp3":
+                        return worldGeoChp3;                        
                 }
                 
             }
