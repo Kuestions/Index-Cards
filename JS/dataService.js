@@ -71,6 +71,13 @@ myApp.factory('Data',  function () {
         {"term":"Some power are given to the nation government and some are restricted to the local government", "correctAnswer":"Federation"}
     ];     
     
+    //test array containing vocabulary words as terms and definitions as correctAnswer
+    var worldGeoChp4 = [
+        {"term":"materials in the natural enviroment that people value and use to satisfy their needs", "correctAnswer":"Natural Resouces"}, 
+        {"term":"Can be replaced once thery have been used", "correctAnswer":"Renewable Resource"}, 
+        {"term":"mineral resources formed from the remains of ancient plants and animals", "correctAnswer":"Fossil Fuels"}, 
+        {"term":"Water power, solar energy, gothermal energy, wind power", "correctAnswer":"types of energy"}       
+    ];       
 return {      
     
             //return requested test
@@ -83,7 +90,9 @@ return {
                     case "worldGeoChp2":
                         return worldGeoChp2;
                     case "worldGeoChp3":
-                        return worldGeoChp3;                        
+                        return worldGeoChp3;  
+                    case "worldGeoChp4":
+                        return worldGeoChp4;                         
                 }
                 
             }
