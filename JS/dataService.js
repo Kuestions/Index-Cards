@@ -20,63 +20,44 @@ myApp.factory('Data',  function () {
         {"term":"a compound of a class of simple organic compounds that contains a carboxyl group and an amino group and combine to form proteins.", "correctAnswer":"Amino acid"}    
     ]; 
     
-    //test array containing vocabulary words as terms and definitions as correctAnswer
-    var worldGeoChp1 = [
-        {"term":"the study of where people, places, and things are located and how they are related to each other", "correctAnswer":"Geography"}, 
-        {"term":"(sound, navigation, and ronging) a tool that analize sounds to determine distance", "correctAnswer":"sonar"}, 
-        {"term":"a radio navigation system that allow land, sea, and airborne uses", "correctAnswer":"GPS"}, 
-        {"term":"a geographic intermation system, which uses compouter technology to connect", "correctAnswer":"GIS"},
-        {"term":"location, place, region, movement, human-enviroment interaction", "correctAnswer":"5 themes of Geography"},
-        {"term":"Absolute location (the location's place on the globe equater), relative location (its location compared to each place) ", "correctAnswer":"Absolute Location vs Relative location"},
-        {"term":"Imaginary line halfway betweeen the North and South poles", "correctAnswer":"Equater"},
-        {"term":"Lines that run parallel to the Equater that measure distance north to south and run east to west", "correctAnswer":"Latitude"},
-        {"term":"Lines that measure distance east to west and run north to south", "correctAnswer":"Longitude"},
-        {"term":"at 0 degrees longitude. Shifts world into North and South", "correctAnswer":"Prime Meridian"},
-        {"term":"include land forms (mountan or flat). Human charatereristics. include languages, customes, adn beliefs", "correctAnswer":"Physical and Human chara. of a Place"},
-        {"term":"Inner Core, Outer Core, Mantel, Crust", "correctAnswer":"4 layers of Earth"}, 
-        {"term":"Mountains, Hills, Plataus, plains", "correctAnswer":"4 different types of land forms"}, 
-        {"term":"circle of volcanes surrounding the pacific ocean", "correctAnswer":"Ring of Fire"},
-        {"term":"When plates pull away from each other", "correctAnswer":"Divergent"},
-        {"term":"when two connected plates collide", "correctAnswer":"Covergent"},
-        {"term":"plates grind past each other on faults", "correctAnswer":"Transform"},
-        {"term":"when rocks is harden down ", "correctAnswer":"Mechanical Weathering"},
-        {"term":"when the actual chemical makeup of the rocks has changed", "correctAnswer":"chemical weathering"},
-        {"term":"the movement of weathered sediment such as gravel, soil, and sand. The cause of erosion are water, wind, and glaciers", "correctAnswer":"erosions"}        
-    ];
-    
-    //test array containing vocabulary words as terms and definitions as correctAnswer
-    var worldGeoChp2 = [
-        {"term":"Turning of the earth on its own axis", "correctAnswer":"Rotation"}, 
-        {"term":"It takes 365 1/2 days for the earth to orbit around the sun", "correctAnswer":"Revolutioin"}, 
-        {"term":"An extra day making once every 4 years have 365 days", "correctAnswer":"Leap year"}, 
-        {"term":"two times a year the sun is directly over the Tropic of Cancer (summer) and capricorn (winter). ", "correctAnswer":"Solstice"},
-        {"term":"two times a year (spring and fall ) when day and night are equal length through out the world.", "correctAnswer":"Equinox"},
-        {"term":"is the rise in earth's temperture caused by increasing amounts", "correctAnswer":"Global warming"},
-        {"term":"use renewable energy(solor wing)", "correctAnswer":"Prevent Global warming"}        
-    ];   
-    
-    //test array containing vocabulary words as terms and definitions as correctAnswer
-    var worldGeoChp3 = [
-        {"term":"the study of population", "correctAnswer":"Demography"}, 
-        {"term":"an be caculated by the total population divided by the regions land area", "correctAnswer":"Population density"}, 
-        {"term":"object that makes such food, architecture, art, etc. ", "correctAnswer":"Material Culture"}, 
-        {"term":"ideas such as religion, language, spiritual beliefs, government systems, etc.", "correctAnswer":"Non-material culture"},
-        {"term":"worship of one God", "correctAnswer":"Monotheism"},
-        {"term":"worship of multiple gods", "correctAnswer":"Polytheism"},
-        {"term":"Is the tendency for cultures to become more alike as they share technology and organizational structure", "correctAnswer":"Cultureal Covergence"},
-        {"term":"When a cultural element is transmitted from one group to another", "correctAnswer":"Diffusion"}, 
-        {"term":"4 charateristics that define a country", "correctAnswer":"clearly defined territory, population, sovereignty, government"}, 
-        {"term":"a nation's freedom from outside control ", "correctAnswer":"Sovereignty"}, 
-        {"term":"one central goverenment that runs a nation", "correctAnswer":"unitary system"},
-        {"term":"Some power are given to the nation government and some are restricted to the local government", "correctAnswer":"Federation"}
-    ];     
-    
-    //test array containing vocabulary words as terms and definitions as correctAnswer
-    var worldGeoChp4 = [
-        {"term":"materials in the natural enviroment that people value and use to satisfy their needs", "correctAnswer":"Natural Resouces"}, 
-        {"term":"Can be replaced once thery have been used", "correctAnswer":"Renewable Resource"}, 
-        {"term":"mineral resources formed from the remains of ancient plants and animals", "correctAnswer":"Fossil Fuels"}, 
-        {"term":"Water power, solar energy, gothermal energy, wind power", "correctAnswer":"types of energy"}       
+    var scienceChp7 = [
+
+        {"term":"a substance or molecule that participates in a chemical reaction", "correctAnswer":"Reactant"}, 
+
+        {"term":"a substance that forms in a chemical reaction", "correctAnswer":"Product"}, 
+
+        {"term":"the energy released when a chemical compound reacts to produce new compounds", "correctAnswer":"Chemical energy"}, 
+
+        {"term":"a chemical reaction in which energy is released to the surrounding as heat", "correctAnswer":"Exothermic reaction"},
+
+        {"term":"a chemical reaction that require energy input or energy is absorb from surrounding as heat", "correctAnswer":"Endothermic reaction"},
+
+        {"term":"a representation of a chemical reaction that uses symbols to show the relationship between the reactions and the products ", "correctAnswer":"Chemical equation"},
+
+        {"term":"the relative number of moles of the substances require to produce a given amount of product in a compound reaction. ", "correctAnswer":"Mole ratio"},
+
+        {"term":"reaction in which two or more substances combine to form a complex product  )", "correctAnswer":"Synthesis reaction"},
+
+        {"term":"a reaction in which a single compound breaks down to form two or more simple substances", "correctAnswer":"Decomposition reaction"},
+
+        {"term":"the oxidation reaction of an organic compound in which heat is release", "correctAnswer":"Combustion reaction"},
+
+        {"term":"reaction in which one element or radical takes the place of another element or radical in a compound", "correctAnswer":"Single displacement"},
+
+        {"term":"reaction in which a gas, a solid precipitate, or a molecule compound forms from the exchange of atoms or ions between two compounds. (Should be a chemical reaction where two compounds exchange ions to form two new product compounds", "correctAnswer":"Double displacement"}, 
+
+        {"term":"an atom that has one unpaired electron", "correctAnswer":"Free Radical"}, 
+
+        {"term":"any chemical change in which one species is oxidized and another species is reduced. Also call redox reaction", "correctAnswer":"Oxidation reduction reaction"},
+
+        {"term":"a substance that changes the rate of a chemical reaction without being consumed or changed significantly. ", "correctAnswer":"Catalyst"},
+		
+       {"term":"a molecule, neither protein or RNA, that acts as a catalyst in biochemical reactions", "correctAnswer":"Enzyme"}, 
+	   
+       {"term":"the reactant in reactions catalyst by enzymes", "correctAnswer":"Substrate"}, 	   
+
+        {"term":"a state of balance in which the rate of a forward reaction equates the rate of the reverse reaction and the concentration of products and reactants remain unchanged.", "correctAnswer":"Chemical equilibrium"}, 		
+
     ];       
 return {      
     
@@ -85,14 +66,8 @@ return {
                 switch(test){
                     case "scienceChp5":
                         return scienceChp5;
-                    case "worldGeoChp1":
-                        return worldGeoChp1;
-                    case "worldGeoChp2":
-                        return worldGeoChp2;
-                    case "worldGeoChp3":
-                        return worldGeoChp3;  
-                    case "worldGeoChp4":
-                        return worldGeoChp4;                         
+                    case "scienceChp7":
+                        return scienceChp7;                       
                 }
                 
             }
