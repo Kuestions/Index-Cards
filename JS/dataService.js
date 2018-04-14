@@ -56,18 +56,103 @@ myApp.factory('Data',  function () {
 	   
        {"term":"the reactant in reactions catalyst by enzymes", "correctAnswer":"Substrate"}, 	   
 
-        {"term":"a state of balance in which the rate of a forward reaction equates the rate of the reverse reaction and the concentration of products and reactants remain unchanged.", "correctAnswer":"Chemical equilibrium"}, 		
+        {"term":"a state of balance in which the rate of a forward reaction equates the rate of the reverse reaction and the concentration of products and reactants remain unchanged.", "correctAnswer":"Chemical equilibrium"} 		
 
-    ];       
+    ];
+    
+    var worldGeoUnit3 = [
+
+        {"term":"A storm with winds at least 39 mph", "correctAnswer":"Tropical Storm"}, 
+
+        {"term":"A storm with winds at least 74 mph", "correctAnswer":"Hurricane"}, 
+
+        {"term":"People of both Native American and European descent", "correctAnswer":"Mestizo"}, 
+
+        {"term":"People of African and European descent", "correctAnswer":"Mulatto"},
+
+        {"term":"2 Main Mountain Ranges in Mexicao", "correctAnswer":"Sierra Madre Occidental and Sierra Marie"},
+
+        {"term":"Baja California", "correctAnswer":"Oriental"},
+
+        {"term":"Mexico City", "correctAnswer":"Capital (most populous city of Mexico)"},
+
+        {"term":"Plaza de las Tres Culturas (The Three Cultures)", "correctAnswer":"A square in Mexico City that recognize the phase of Mexico history"},
+
+        {"term":"Tenochtitlan", "correctAnswer":"Was the center of the empire"},
+
+        {"term":"4 social classes of New Span", "correctAnswer":"Peninsulares, Criollos, Mestizos, Native Americans"},
+
+        {"term":"Hacienda", "correctAnswer":"Haciendas and NA were given to conquistadors as rewards by the Spanish KIng"},
+
+        {"term":"Subsistence Farming", "correctAnswer":"gave only enough to meet family needs"}, 
+
+        {"term":"Latifundios", "correctAnswer":"a commercial farm own by private individuals"}, 
+
+        {"term":"2 Most Important Economic Activities", "correctAnswer":"Petroleum extraction and ?????"},
+
+        {"term":"Smokeless Industry", "correctAnswer":"Tourism is a cleaner alternative"},
+		
+        {"term":"Where Central America is located", "correctAnswer":"Between N. America and S. America"}, 
+	   
+        {"term":"Isthmus", "correctAnswer":"Narrow strip of land, water on both sides, connecting two large bodies of land"}, 	   
+
+        {"term":"3 Major Landform Regions of Central America", "correctAnswer":"The Mountainous Core, Caribbean coastal lands, Pacific coastal plains"}, 
+
+        {"term":"Combined land of Central America is ______ the size of Mexico.", "correctAnswer":"7/4"}, 
+	   
+        {"term":"The poorest 20% receive _____ of all income while the wealthiest 20% receives _____.", "correctAnswer":"3%, 61%"}, 	   
+
+        {"term":"Caribbean Islands 3 Island Groups", "correctAnswer":"The Greater Antilles, the Lesser Antilles, Bahamas"}, 
+        
+        {"term":"Tiempo Muerto (The Dead Season)", "correctAnswer":"Sugar plantations are major employers but busy season is only 4 months out of the year other months"}, 
+	   
+        {"term":"Brazil is the ______ largest in land in the world.", "correctAnswer":"5th"}, 
+        
+        {"term":"Sertao", "correctAnswer":"Brazil's interior plateau"}, 
+	   
+        {"term":"“Coffeepot”", "correctAnswer":"Brazil referred to aas the world 'coffeepot'. Produce 1/4 of the world supply in the southeast region"}, 	   
+
+        {"term":"Carnival", "correctAnswer":"Rio de Janeiro. Famous festival"}, 
+        
+        {"term":"Brasilia", "correctAnswer":"Capital Brasilia is in the highlands"}, 
+	   
+        {"term":"Amazon River Region", "correctAnswer":"Largest and least explored region"}, 	   
+
+        {"term":"Gasohol", "correctAnswer":"a mix of gasoline and ethanol in response to the cost of important oil"}, 
+                
+        {"term":"3 Regions of South America", "correctAnswer":"Northern Tropics, Andean Countries, Southern Grassland Countries"}, 
+	   
+        {"term":"Languages of Guyana, Suriname, and French Guiana", "correctAnswer":"Guyana (English), Suriname (Dutch), French Guiana (French)"}, 	   
+
+        {"term":"Colombia", "correctAnswer":"Marijuana and cocaine are exported illegally"},  
+                
+        {"term":"Ecuador’s name", "correctAnswer":"End of the land"}, 
+	   
+        {"term":"Chile", "correctAnswer":"NO ANSWER GIVEN"}, 	   
+
+        {"term":"Estuary", "correctAnswer":"??? and river mouth formed where flooded river valley meets the sea"},
+        
+        {"term":"Itaipu Dam", "correctAnswer":"one of the world's largest hydroelectric projects"}, 
+	   
+        {"term":"Uruguay", "correctAnswer":"river of the painted bird"}, 	   
+
+        {"term":"Argentiana", "correctAnswer":"NO ANSWER GIVEN"},
+        
+        {"term":"Patagonia", "correctAnswer":"Region of Chile and Argentina, south of the pampas. Dry, cold, and sometimes foggy. Suited for raising sheep."}   
+      
+
+    ];    
 return {      
     
-            //return requested test
+            //return requested test 
             getData: function(test){
                 switch(test){
                     case "scienceChp5":
                         return scienceChp5;
                     case "scienceChp7":
-                        return scienceChp7;                       
+                        return scienceChp7; 
+                    case "worldGeoUnit3":
+                        return worldGeoUnit3;                        
                 }
                 
             }
