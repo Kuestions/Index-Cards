@@ -70,7 +70,7 @@ myApp.factory('Data',  function () {
 
         {"term":"People of African and European descent", "correctAnswer":"Mulatto"},
 
-        {"term":"2 Main Mountain Ranges in Mexicao", "correctAnswer":"Sierra Madre Occidental and Sierra Marie"},
+        {"term":"2 Main Mountain Ranges in Mexicao", "correctAnswer":"Sierra Madre Occidental and Sierra Marie Oriental"},
 
         {"term":"Baja California", "correctAnswer":"Oriental"},
 
@@ -82,15 +82,15 @@ myApp.factory('Data',  function () {
 
         {"term":"4 social classes of New Span", "correctAnswer":"Peninsulares, Criollos, Mestizos, Native Americans"},
 
-        {"term":"Hacienda", "correctAnswer":"Haciendas and NA were given to conquistadors as rewards by the Spanish KIng"},
+        {"term":"Hacienda", "correctAnswer":"spanish owned estate of land, run as farms or cattle ranch"},
 
-        {"term":"Subsistence Farming", "correctAnswer":"gave only enough to meet family needs"}, 
+        {"term":"Subsistence Farming", "correctAnswer":"grow only to meet family needs"}, 
 
         {"term":"Latifundios", "correctAnswer":"a commercial farm own by private individuals"}, 
 
-        {"term":"2 Most Important Economic Activities", "correctAnswer":"Petroleum extraction and ?????"},
+        {"term":"2 Most Important Economic Activities", "correctAnswer":"Petroleum extraction and tourism"},
 
-        {"term":"Smokeless Industry", "correctAnswer":"Tourism is a cleaner alternative"},
+        {"term":"Smokeless Industry", "correctAnswer":"Tourism"},
 		
         {"term":"Where Central America is located", "correctAnswer":"Between N. America and S. America"}, 
 	   
@@ -110,7 +110,7 @@ myApp.factory('Data',  function () {
         
         {"term":"Sertao", "correctAnswer":"Brazil's interior plateau"}, 
 	   
-        {"term":"“Coffeepot”", "correctAnswer":"Brazil referred to aas the world 'coffeepot'. Produce 1/4 of the world supply in the southeast region"}, 	   
+        {"term":"“Coffeepot”", "correctAnswer":"Southeast region/Brazil"}, 	   
 
         {"term":"Carnival", "correctAnswer":"Rio de Janeiro. Famous festival"}, 
         
@@ -136,7 +136,7 @@ myApp.factory('Data',  function () {
 	   
         {"term":"Uruguay", "correctAnswer":"river of the painted bird"}, 	   
 
-        {"term":"Argentiana", "correctAnswer":"NO ANSWER GIVEN"},
+        {"term":"Argentiana", "correctAnswer":"Pampase"},
         
         {"term":"Patagonia", "correctAnswer":"Region of Chile and Argentina, south of the pampas. Dry, cold, and sometimes foggy. Suited for raising sheep."}   
       
