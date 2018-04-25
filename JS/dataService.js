@@ -142,9 +142,245 @@ myApp.factory('Data',  function () {
       
 
     ];    
+	
+var worldGeoChp14 = [
+ 
+        {"term":"The rebirth of art, literature, science, and technology", "correctAnswer":"Renaissance"}, 
+ 
+        {"term":"Gradual replacement of many hands tools by machines", "correctAnswer":"Industrial Revolution"}, 
+ 
+        {"term":"Mountain range that separates Italy from Europe", "correctAnswer":"The Alps"}, 
+ 
+        {"term":"3 % of the world’s landmass", "correctAnswer":"Europe"}
+ 
+    ]; 
+ 
+    var worldGeoChp15 = [
+ 
+        {"term":"UK refers to the political union between the countries.", "correctAnswer":"United Kingdom"}, 
+ 
+        {"term":"the official collective name of England, Scotland, and Walls.", "correctAnswer":"Great Britain "}, 
+ 
+        {"term":"geographical term relating to the UK, Republic of Ireland, and 5000 surrounding island.", "correctAnswer":"British Isles"}, 
+ 
+        {"term":"Highland, Midland, and Lowland", "correctAnswer":"3 Landscapes of England"},
+               
+        {"term":"In 2016 UK left the European Union, voted to leave by 51% of population", "correctAnswer":"Brexit"}, 
+ 
+        {"term":"House of Common and House of Lords", "correctAnswer":"Two Houses of Government"}, 
+ 
+        {"term":"Where the UK parliament meet. Built in 1016. Oldest part still used as Westminster hall built in 1097", "correctAnswer":"Palace of Westminster"},         
+ 
+        {"term":"1/3", "correctAnswer":"Scotland occupies about _____of land in UK "},
+               
+        {"term":"10%", "correctAnswer":"Scotland occupies less than ___% of people live there"}, 
+ 
+        {"term":"Northern Ireland and Republic of Ireland", "correctAnswer":"2 parts of Ireland"}, 
+ 
+        {"term":"Hit in 1840s a=and destroyed Potato years after years", "correctAnswer":"Potato Famine"}                             
+ 
+    ]; 
+ 
+    var worldGeoChp16 = [
+ 
+        {"term":"Famous for the international film festival", "correctAnswer":"Cannes"}, 
+ 
+        {"term":"One of the world's largest museums and a historic monument in Paris, France. Holds the original Mona Lisa", "correctAnswer":"The Louvre "}, 
+ 
+        {"term":"Germany, Austria-Hungry, and Italy", "correctAnswer":"3 Countries in the Triple Alliance"}, 
+ 
+        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"East and West Germany"},
+               
+        {"term":"Belgium, Netherlands, and Luxembourg", "correctAnswer":"3 Benelux Countries"}, 
+ 
+        {"term":"1/3", "correctAnswer":"Almost ___ of the Netherlands is below sea level"}, 
+ 
+        {"term":"Chocolate and Cheese", "correctAnswer":"2 processed products Switzerland is known for"},           
+ 
+        {"term":"Switzerland and Austria", "correctAnswer":"World leaders in the development of new medicines "}
+                               
+    ]; 
+ 
+    var worldGeoChp17= [
+ 
+        {"term":"Separating the Mediterranean Sea and Atlantic Ocean", "correctAnswer":"Iberian Peninsula (Spain and Portugal)"}, 
+ 
+        {"term":"1/6", "correctAnswer":"Portugal covers ___ of the land"}, 
+ 
+        {"term":"The central plateau of Spain. River flow across it. In a rain shadow", "correctAnswer":"Mesta"}, 
+ 
+        {"term":"method that leaves land unplanted every few years to gather moisture", "correctAnswer":"Dry farming"},
+               
+        {"term":"Northern, Central, and Southern Italy", "correctAnswer":"3 Regions of Italy"}, 
+ 
+        {"term":"Closes to Europe and resembles central Europe more", "correctAnswer":"European Italy"}, 
+ 
+        {"term":"Head of the Roman Catholic Church. Smallest Country in the world. Where people live lsess then 1 sq mile.", "correctAnswer":"Vatican City"}, 
+ 
+        {"term":"Youngest City. So overpopulated. Its faster to walk then drive", "correctAnswer":"Athens"}             
+ 
+    ]; 
+ 
+    var worldGeoChp18= [
+ 
+        {"term":"Russia", "correctAnswer":"World’s largest nation. Best defence is the geography and climate"}, 
+ 
+        {"term":"In Russia, mark border between Europe and Asia", "correctAnswer":"Ural Mountains"}, 
+ 
+        {"term":"South of the tundra are thinly scattered coniferous forest ", "correctAnswer":"Taiga"}, 
+ 
+        {"term":"expansive temperate grassland provides fertile soil for agriculture ", "correctAnswer":"Steppe"},
+               
+        {"term":"containing many ethnic group", "correctAnswer":"Multi-ethnic"}, 
+ 
+        {"term":"Composed of people who shared such thing as culture, language, and religion", "correctAnswer":"Culture (Could be wrong)"}, 
+ 
+        {"term":"government controls the means of production and distribution of goods and services", "correctAnswer":"Communism Economy"}, 
+ 
+        {"term":"Producers and consumers control business with some government regulation", "correctAnswer":"Capitalism Economy"}           
+ 
+    ]; 
+ 
+    var worldGeoChp19= [
+ 
+        {"term":"covered by Northern European Plain and WWII: Once home to 3 million Jews ", "correctAnswer":"Poland and WWII"}, 
+ 
+        {"term":"Process of selling government owned industries and business to private owners who can run them more efficiently ", "correctAnswer":"Privatization"}, 
+ 
+        {"term":"Government owned where they shared profits from their produce", "correctAnswer":"Collective farming"}, 
+ 
+        {"term":"Nickname the “breadbasket” of Europe ", "correctAnswer":"Danube River"},
+               
+        {"term":"containing many ethnic group", "correctAnswer":"Multi-ethnic"}, 
+ 
+        {"term":"Coca-Cola Company (Could be wrong)", "correctAnswer":"Romania"}, 
+ 
+        {"term":"Known as the “garden” of Eastern Europe", "correctAnswer":"Bulgaria"}
+    ]; 
+ 
+    var worldGeoChp20= [
+ 
+        {"term":"Russian power was challenged when French emperor Napoleon led an invasion on Russia ", "correctAnswer":"Russia and Napoleon"}, 
+ 
+        {"term":"1917, te Russia Revolution established a government based on the ideas of Karl Marx ", "correctAnswer":"Russian Revolution and Karl Marx"}, 
+ 
+        {"term":"received wages", "correctAnswer":"State Farmers"}, 
+ 
+        {"term":"Shared any surpluses that remained after products were sold and cost were paid", "correctAnswer":"Collective Farmers"},
+               
+        {"term":"- allowed citizens and news media to say....... they wished without fear of government persecution", "correctAnswer":"Glasnost"}
+ 
+    ]; 
+	
+var worldGeoUnit45 = [
+ 
+        {"term":"The rebirth of art, literature, science, and technology", "correctAnswer":"Renaissance"}, 
+ 
+        {"term":"Gradual replacement of many hands tools by machines", "correctAnswer":"Industrial Revolution"}, 
+ 
+        {"term":"Mountain range that separates Italy from Europe", "correctAnswer":"The Alps"}, 
+ 
+        {"term":"3 % of the world’s landmass", "correctAnswer":"Europe"},
+	
+        {"term":"UK refers to the political union between the countries.", "correctAnswer":"United Kingdom"}, 
+ 
+        {"term":"the official collective name of England, Scotland, and Walls.", "correctAnswer":"Great Britain "}, 
+ 
+        {"term":"geographical term relating to England, Ireland, and 5000 surrounding island.", "correctAnswer":"British Isles"}, 
+ 
+        {"term":"Highland, Midland, and Lowland", "correctAnswer":"3 Landscapes of England"},
+               
+        {"term":"In 2016 UK left the European Union, voted to leave by 51% of population", "correctAnswer":"Brexit"}, 
+ 
+        {"term":"House of Common and House of Lords", "correctAnswer":"Two Houses of Government"}, 
+ 
+        {"term":"Where the UK parliament meet. Built in 1016. Oldest part still used as Westminster hall built in 1097", "correctAnswer":"Palace of Westminster"},         
+ 
+        {"term":"1/3", "correctAnswer":"Scotland occupies about _____of land in UK "},
+               
+        {"term":"10%", "correctAnswer":"Scotland occupies less than ___% of people live there"}, 
+ 
+        {"term":"Northern Ireland and Republic of Ireland", "correctAnswer":"2 parts of Ireland"}, 
+ 
+        {"term":"Hit in 1840s and destroyed Potato years after years. most people relied on potatoes as a major source of nutrition", "correctAnswer":"Potato Famine"},   
+ 
+        {"term":"Famous for international film festival", "correctAnswer":"Cannes"}, 
+ 
+        {"term":"One of the world's largest museums and a historic monument in Paris, France. Holds the original Mona Lisa", "correctAnswer":"The Louvre "}, 
+ 
+        {"term":"Germany, Austria-Hungry, and Italy", "correctAnswer":"3 Countries in the Triple Alliance"}, 
+ 
+        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"East and West Germany"},
+               
+        {"term":"Belgium, Netherlands, and Luxembourg", "correctAnswer":"3 Benelux Countries"}, 
+ 
+        {"term":"1/3", "correctAnswer":"Almost ___ of the Netherlands is below sea level"}, 
+ 
+        {"term":"Chocolate and Cheese", "correctAnswer":"2 processed products Switzerland is known for"},           
+ 
+        {"term":"Switzerland and Austria", "correctAnswer":"World leaders in the development of new medicines "},
+	
+        {"term":"Separating the Mediterranean Sea and Atlantic Ocean", "correctAnswer":"Iberian Peninsula (Spain and Portugal)"}, 
+ 
+        {"term":"1/6", "correctAnswer":"Portugal covers ___ of the land"}, 
+ 
+        {"term":"The central plateau of Spain. River flow across it. In a rain shadow", "correctAnswer":"Mesta"}, 
+ 
+        {"term":"method that leaves land unplanted every few years to gather moisture", "correctAnswer":"Dry farming"},
+               
+        {"term":"Northern, Central, and Southern Italy", "correctAnswer":"3 Regions of Italy"}, 
+ 
+        {"term":"Closes to Europe and resembles central Europe more", "correctAnswer":"European Italy"}, 
+ 
+        {"term":"Head of the Roman Catholic Church. Smallest Country in the world. Where people live lsess then 1 sq mile.", "correctAnswer":"Vatican City"}, 
+ 
+        {"term":"Youngest City. So overpopulated. Its faster to walk then drive", "correctAnswer":"Athens"},  
+ 
+        {"term":"Russia", "correctAnswer":"World’s largest nation"}, 
+ 
+        {"term":"In Russia, mark border between Europe and Asia", "correctAnswer":"Ural Mountains"}, 
+ 
+        {"term":"South of the tundra are thinly scattered coniferous forest ", "correctAnswer":"Taiga"}, 
+ 
+        {"term":"expansive temperate grassland provides fertile soil for agriculture ", "correctAnswer":"Steppe"},
+               
+        {"term":"containing many ethnic group", "correctAnswer":"Multi-ethnic"}, 
+ 
+        {"term":"Composed of people who shared such thing as culture, language, and religion", "correctAnswer":"Culture (Could be wrong)"}, 
+ 
+        {"term":"government controls the means of production and distribution of goods and services", "correctAnswer":"Communism Economy"}, 
+ 
+        {"term":"Producers and consumers control business with some government regulation", "correctAnswer":"Capitalism Economy"},
+	
+        {"term":"covered by Northern European Plain and WWII: Once home to 3 million Jews ", "correctAnswer":"Poland and WWII"}, 
+ 
+        {"term":"Process of selling government owned industries and business to private owners who can run them more efficiently ", "correctAnswer":"Privatization"}, 
+ 
+        {"term":"Government owned where they shared profits from their produce", "correctAnswer":"Collective farming"}, 
+ 
+        {"term":"Nickname the “breadbasket” of Europe ", "correctAnswer":"Danube River"},
+               
+        {"term":"containing many ethnic group", "correctAnswer":"Multi-ethnic"}, 
+ 
+        {"term":"Coca cola industry expanded their business", "correctAnswer":"Romania"}, 
+ 
+        {"term":"Known as the “garden” of Eastern Europe", "correctAnswer":"Bulgaria"},
+	
+        {"term":"Russian power was challenged when French emperor Napoleon led an invasion on Russia ", "correctAnswer":"Russia and Napoleon"}, 
+ 
+        {"term":"1917, te Russia Revolution established a government based on the ideas of Karl Marx ", "correctAnswer":"Russian Revolution and Karl Marx"}, 
+ 
+        {"term":"received wages", "correctAnswer":"State Farmers"}, 
+ 
+        {"term":"Shared any surpluses that remained after products were sold and cost were paid", "correctAnswer":"Collective Farmers"},
+               
+        {"term":"- allowed citizens and news media to say....... they wished without fear of government persecution", "correctAnswer":"Glasnost"}
+ 
+    ]; 	
+	
 return {      
     
-            //return requested test 
+            //return requested test worldGeoChp14
             getData: function(test){
                 switch(test){
                     case "scienceChp5":
@@ -152,7 +388,23 @@ return {
                     case "scienceChp7":
                         return scienceChp7; 
                     case "worldGeoUnit3":
-                        return worldGeoUnit3;                        
+                        return worldGeoUnit3; 
+                    case "worldGeoChp14":
+                        return worldGeoChp14;
+                    case "worldGeoChp15":
+                        return worldGeoChp15;
+                    case "worldGeoChp16":
+                        return worldGeoChp16;
+                    case "worldGeoChp17":
+                        return worldGeoChp17;
+                    case "worldGeoChp18":
+                        return worldGeoChp18;
+                    case "worldGeoChp19":
+                        return worldGeoChp19;
+                    case "worldGeoChp20":
+                        return worldGeoChp20;
+                    case "worldGeoUnit45":
+                        return worldGeoUnit45;						
                 }
                 
             }
