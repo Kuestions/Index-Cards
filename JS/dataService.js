@@ -349,7 +349,7 @@ var worldGeoUnit45 = [
                
         {"term":"containing many ethnic group", "correctAnswer":"Multi-ethnic"}, 
  
-        {"term":"Composed of people who shared such thing as culture, language, and religion", "correctAnswer":"Culture (Could be wrong)"}, 
+        {"term":"Composed of people who shared such thing as culture, language, and religion", "correctAnswer":"Culture "}, 
  
         {"term":"government controls the means of production and distribution of goods and services", "correctAnswer":"Communism Economy"}, 
  

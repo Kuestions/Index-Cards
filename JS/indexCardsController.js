@@ -28,7 +28,10 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
     $scope.topScoreTestName = "";
     
     //initial variable that is display to the student the highest recorded score for that test
-    $scope.topScore = "";
+    $scope.topScore = 0;
+	
+	//initial variable that returns false if there is no current test stored in local storage based off of topscore
+	$scope.noTopScore = false;
     
     //set up flashing score as false
     $scope.flashingScore = false;
@@ -193,8 +196,12 @@ myApp.controller('indexCardsController',  function($scope, Vocabulary, Score, Da
         $scope.topScoreTestName = requestedTest;
         
         //if a score is already set, assign and display to student
-        $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);        
-       
+        $scope.topScore = TopScore.getTestScores($scope.topScoreTestName);
+		
+		//test if there is a score, and if so show the top score element
+		if($scope.topScore !== null)
+			$scope.noTopScore = true;
+		
         //Test if type of test is multiple choice or fill in the blank
         if(testType=='MS')            
             //set up practice test as a multiple choice

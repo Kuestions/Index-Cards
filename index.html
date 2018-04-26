@@ -129,7 +129,7 @@
         
         </div>
         <!--section for Top Score Feature-->    
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-if="noTopScore">
             <br>
             <h4 class="centerAlign">Beat Your Highest Score</h4>
             <h4 class="centerAlign">{{topScore | number: 0}}%</h4>
@@ -183,11 +183,11 @@
         
         </div>
         <!--section for Top Score Feature-->    
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-if="noTopScore">
             <br>
             <hr>
-            <h4 class="centerAlign">Beat Your Highest Score</h4>
-            <h4 class="centerAlign">{{topScore | number: 0}}%</h4>
+            <h4 class="centerAlign" ng-if="noTopScore">Beat Your Highest Score</h4>
+            <h4 class="centerAlign" ng-if="noTopScore">{{topScore | number: 0}}%</h4>
         </div>             
         </div><!--end of div containing the body of the app-->
         
