@@ -159,7 +159,7 @@ var worldGeoChp14 = [
  
         {"term":"UK refers to the political union between the countries.", "correctAnswer":"United Kingdom"}, 
  
-        {"term":"the official collective name of England, Scotland, and Walls.", "correctAnswer":"Great Britain "}, 
+        {"term":"the official collective name of England, Scotland, and Wales.", "correctAnswer":"Great Britain "}, 
  
         {"term":"geographical term relating to the UK, Republic of Ireland, and 5000 surrounding island.", "correctAnswer":"British Isles"}, 
  
@@ -189,7 +189,7 @@ var worldGeoChp14 = [
  
         {"term":"Germany, Austria-Hungry, and Italy", "correctAnswer":"3 Countries in the Triple Alliance"}, 
  
-        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"East and West Germany"},
+        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"Berlin Wall"},
                
         {"term":"Belgium, Netherlands, and Luxembourg", "correctAnswer":"3 Benelux Countries"}, 
  
@@ -284,7 +284,7 @@ var worldGeoUnit45 = [
 	
         {"term":"UK refers to the political union between the countries.", "correctAnswer":"United Kingdom"}, 
  
-        {"term":"the official collective name of England, Scotland, and Walls.", "correctAnswer":"Great Britain "}, 
+        {"term":"the official collective name of England, Scotland, and Wales.", "correctAnswer":"Great Britain "}, 
  
         {"term":"geographical term relating to England, Ireland, and 5000 surrounding island.", "correctAnswer":"British Isles"}, 
  
@@ -309,8 +309,11 @@ var worldGeoUnit45 = [
         {"term":"One of the world's largest museums and a historic monument in Paris, France. Holds the original Mona Lisa", "correctAnswer":"The Louvre "}, 
  
         {"term":"Germany, Austria-Hungry, and Italy", "correctAnswer":"3 Countries in the Triple Alliance"}, 
- 
-        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"East and West Germany"},
+
+        {"term":"Barrier set up in 1961 by communist East Germany to keep citizens from escaping to democratic West Germany", "correctAnswer":"Berlin Wall"},
+
+		{"term":"East Germany was setup by Soviet Communists. West Germany was setup by democratic western leaders", "correctAnswer":"East and West Germany"},
+	
                
         {"term":"Belgium, Netherlands, and Luxembourg", "correctAnswer":"3 Benelux Countries"}, 
  
