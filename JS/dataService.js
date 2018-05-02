@@ -38,7 +38,19 @@ myApp.factory('Data',  function () {
 	
     //test array containing vocabulary words as terms and definitions as correctAnswer
     var worldGeo25 = [
-        {"term":"Egypt", "correctAnswer":"GIft of the Nile?"}, 
+        {"term":"Egypt", "correctAnswer":"Gift of the Nile?"}, 
+        {"term":"Nile", "correctAnswer":"World's longest river?"},
+		{"term":"Nile fork into two branches, between 2 branches", "correctAnswer":"Nile Delta"},
+        {"term":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "correctAnswer":"Khamsin?"}		
+    ];
+	
+    //test array containing vocabulary words as terms and definitions as correctAnswer
+    var worldGeoUnit4 = [
+        {"term":"Gold and Ivory", "correctAnswer":"What did european trade guns for?"}, 
+        {"term":"800", "correctAnswer":"South of the Sahara___languages are spoken?"},
+		{"term":"Herders move their flocks to differnt pastrares throughout the year", "correctAnswer":"Nomadic herding?"},
+        {"term":"Dissolving and washing away of nutrients", "correctAnswer":"Leaching"},	
+        {"term":"Egypt", "correctAnswer":"Gift of the Nile?"}, 
         {"term":"Nile", "correctAnswer":"World's longest river?"},
 		{"term":"Nile fork into two branches, between 2 branches", "correctAnswer":"Nile Delta"},
         {"term":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "correctAnswer":"Khamsin?"}		
@@ -55,7 +67,9 @@ return {
                     case "worldGeo24":
                         return worldGeo24;
                     case "worldGeo25":
-                        return worldGeo25;						
+                        return worldGeo25;
+                    case "worldGeoUnit4":
+                        return worldGeoUnit4;						
                     case "scienceChp11":
                         return scienceChp11;
                         
