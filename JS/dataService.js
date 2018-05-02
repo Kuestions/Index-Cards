@@ -30,30 +30,30 @@ myApp.factory('Data',  function () {
 	
     //test array containing vocabulary words as terms and definitions as correctAnswer
     var worldGeo24 = [
-        {"term":"Gold and Ivory", "correctAnswer":"What did european trade guns for?"}, 
-        {"term":"800", "correctAnswer":"South of the Sahara___languages are spoken?"},
+        {"term":"What did european trade guns for?", "correctAnswer":"Gold and Ivory"}, 
+        {"term":"South of the Sahara___languages are spoken?", "correctAnswer":"800"},
 		{"term":"Herders move their flocks to differnt pastrares throughout the year", "correctAnswer":"Nomadic herding?"},
         {"term":"Dissolving and washing away of nutrients", "correctAnswer":"Leaching"}		
-    ];
+    ];	
 	
     //test array containing vocabulary words as terms and definitions as correctAnswer
     var worldGeo25 = [
-        {"term":"Egypt", "correctAnswer":"Gift of the Nile?"}, 
-        {"term":"Nile", "correctAnswer":"World's longest river?"},
+        {"term":"Gift of the Nile?", "correctAnswer":"Egypt"}, 
+        {"term":"World's longest river?", "correctAnswer":"Nile"},
 		{"term":"Nile fork into two branches, between 2 branches", "correctAnswer":"Nile Delta"},
         {"term":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "correctAnswer":"Khamsin?"}		
-    ];
+    ];	
 	
     //test array containing vocabulary words as terms and definitions as correctAnswer
     var worldGeoUnit4 = [
-        {"term":"Gold and Ivory", "correctAnswer":"What did european trade guns for?"}, 
-        {"term":"800", "correctAnswer":"South of the Sahara___languages are spoken?"},
+        {"term":"What did european trade guns for?", "correctAnswer":"Gold and Ivory"}, 
+        {"term":"South of the Sahara___languages are spoken?", "correctAnswer":"800"},
 		{"term":"Herders move their flocks to differnt pastrares throughout the year", "correctAnswer":"Nomadic herding?"},
-        {"term":"Dissolving and washing away of nutrients", "correctAnswer":"Leaching"},	
+        {"term":"Dissolving and washing away of nutrients", "correctAnswer":"Leaching"},		
         {"term":"Egypt", "correctAnswer":"Gift of the Nile?"}, 
         {"term":"Nile", "correctAnswer":"World's longest river?"},
 		{"term":"Nile fork into two branches, between 2 branches", "correctAnswer":"Nile Delta"},
-        {"term":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "correctAnswer":"Khamsin?"}		
+        {"term":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "correctAnswer":"Khamsin?"}			
     ];		
 
     
