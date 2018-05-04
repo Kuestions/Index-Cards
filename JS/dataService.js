@@ -100,9 +100,7 @@ var worldGeo26 = [
 
 		{"term":"most western central African countries belong to an African financial community/has value as international markets because it can be exchanged for the French Franc", "correctAnswer":"CFA"},
 
-        {"term":"", "correctAnswer":"Democratic Republic of the Congo"}, 
-
-        {"term":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "correctAnswer":""}
+        {"term":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "correctAnswer":"Democratic Republic of the Congo"}
     ];
 
 
@@ -198,9 +196,7 @@ var worldGeo26 = [
 
 		{"term":"most western central African countries belong to an African financial community/has value as international markets because it can be exchanged for the French Franc", "correctAnswer":"CFA"},
 
-        {"term":"", "correctAnswer":"Democratic Republic of the Congo"}, 
-
-        {"term":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "correctAnswer":""},
+        {"term":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "correctAnswer":"Democratic Republic of the Congo"},
 
         {"term":"The largest lake in Africa", "correctAnswer":"Lake Victoria"}, 
 
