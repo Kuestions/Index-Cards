@@ -176,6 +176,10 @@ body {
     select {
         font-size: 110%;
     }
+    
+    .smallerText {
+        font-size: 20px;
+    }
 }
 
 /*Desktop or big screen*/
