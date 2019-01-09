@@ -16,27 +16,53 @@ myApp.factory('Data',  function () {
 	
    var science1 = [
 
-        {"term":"Scientific study of heredity", "correctAnswer":"Genetics"}, 
+        {"term":"The use of 1 or more of your senses to notice and describe events in an orderly manner", "correctAnswer":"Observation"},
 
-        {"term":"Specific characteristic of an individual", "correctAnswer":"Trait"},
+        {"term":"A logical interpretation or explanation based what is already known", "correctAnswer":"Inference"},
 
-		{"term":"Offspring of crosses between parents with different traits", "correctAnswer":"Hybrid"},
+        {"term":"An predicted outcome that can be tested by further observation and experimentation", "correctAnswer":"Hypothesis"},
 
-        {"term":"Sequence of DNA that codes for a protein and that determines a trait; factors that are passed from parent to offspring", "correctAnswer":"Genes"}, 
+        {"term":"All variables other than the independent variable should be kept unchanged and a control group should be used", "correctAnswer":"Controlled Experiment"},
 
-        {"term":"One of different forms of a gene", "correctAnswer":"Alleles"},
+        {"term":"The variable deliberately changed or manipulated", "correctAnswer":"Independent Variable"},
 
-		{"term":"Having two identical alleles for a particular gene", "correctAnswer":"Homozygous"},
+        {"term":"The variable that is measured", "correctAnswer":"Dependent Variable"},
 
-        {"term":"Having two different alleles for a particular", "correctAnswer":"Heterozygous"}, 
+        {"term":"All variables that remain consistent or constant so they do not affect the results", "correctAnswer":"Control Variables"},
 
-        {"term":"Physical characteristics of an organism", "correctAnswer":"Phenotype"},
+        {"term":"This group is exposed to all the conditions as the experimental group except they do not receive the independent variable. They serve as a comparison", "correctAnswer":"Control Group"},
 
-		{"term":"Genetic makeup of an organism", "correctAnswer":"Genotype"},		
-		
-        {"term":"Diagram that can be used to predict the genotype and phenotype combination of a genetic across.", "correctAnswer":"Punnett Square"}
+        {"term":"A harmless pill prescribed more for the psychological benefit to the patient. It does not contain actual medication", "correctAnswer":"Placebo"},
 
-    ]; 
+        {"term":"The combination of chemical reactions as it carries out its life processes", "correctAnswer":"Metabolism"},
+
+        {"term":"The fairly constant set of internal conditions that must be maintained for survival. Ex. A person's temperature", "correctAnswer":"Homeostasis"},
+
+        {"term":"Monomers", "correctAnswer":"Small chemical units that make up larger macromolecules. They are the building blocks (single blocks)"},     
+
+        {"term":"Polymers", "correctAnswer":"Molecules composed of more then one monomer. Think of them as the brick wall"},
+
+        {"term":"Carbohydrates", "correctAnswer":"Macromolecule made of C, H, O that is used for short term energy and structural support in cell walls"},
+
+        {"term":"Lipids", "correctAnswer":"Macromolecules made of C, H, O, but very O that is used for long term energy storage and to makeup the majority of the cell membrane"},
+
+        {"term":"Proteins", "correctAnswer":"Macromolecule made of C, H, O,N, needed by body for growth and repair"},                       
+
+        {"term":"Nucleic Acids", "correctAnswer":"Macromolecule made of C, H, O, P, N that is used for the storage and passing of genetic information"},
+
+        {"term":"Chemical Reaction", "correctAnswer":"The process that changes one set of chemicals into another set of chemicals with their own unique prooperties"},
+
+        {"term":"Reactants", "correctAnswer":"Elements or compounds that enter into the chemical reaction. They are at the beginning of the chemical reaction."},
+
+        {"term":"Products", "correctAnswer":"Energy input that is needed for a reaction to begin"},           
+
+        {"term":"Activation Energy", "correctAnswer":"A substance that speeds up a chemical reaction"},
+
+        {"term":"Catalyst", "correctAnswer":"Protein catalyst that speed up the rate of specific biological reactions by lowering the amount of activation energy needed to get it going"},
+
+        {"term":"Enzyme", "correctAnswer":"The reactant of an enzyme reaction. It is what the enzyme works in order to produce products"}
+
+    ];
 	
 return {      
     
