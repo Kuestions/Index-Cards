@@ -16,51 +16,33 @@ myApp.factory('Data',  function () {
 	
    var science1 = [
 
-        {"term":"The use of 1 or more of your senses to notice and describe events in an orderly manner", "correctAnswer":"Observation"},
+        {"term":"Energy stored in the arrangement of particles of matter", "correctAnswer":"Chemical Energy"},
 
-        {"term":"A logical interpretation or explanation based what is already known", "correctAnswer":"Inference"},
+        {"term":"A path that electricity follows", "correctAnswer":"Circuit"},
 
-        {"term":"An predicted outcome that can be tested by further observation and experimentation", "correctAnswer":"Hypothesis"},
+        {"term":"Materials that allow electric charge to flow through them easily", "correctAnswer":"Conductors"},
 
-        {"term":"All variables other than the independent variable should be kept unchanged and a control group should be used", "correctAnswer":"Controlled Experiment"},
+        {"term":"A steady movement of charges through certain materials", "correctAnswer":"Electric Current"},
 
-        {"term":"The variable deliberately changed or manipulated", "correctAnswer":"Independent Variable"},
+        {"term":"A temporary magnet caused by an electrical current", "correctAnswer":"Electromagnet"},
 
-        {"term":"The variable that is measured", "correctAnswer":"Dependent Variable"},
+        {"term":"A material that does not carry current electricity well", "correctAnswer":"Insulator"},
 
-        {"term":"All variables that remain consistent or constant so they do not affect the results", "correctAnswer":"Control Variables"},
+        {"term":"A device that produces an electric current", "correctAnswer":"Generator"},
 
-        {"term":"This group is exposed to all the conditions as the experimental group except they do not receive the independent variable. They serve as a comparison", "correctAnswer":"Control Group"},
+        {"term":"Energy of motion", "correctAnswer":"Kinetic energy"},
 
-        {"term":"A harmless pill prescribed more for the psychological benefit to the patient. It does not contain actual medication", "correctAnswer":"Placebo"},
+        {"term":"An object that attracts iron, steal, and a few other (but not all) metals", "correctAnswer":"Magnet"},
 
-        {"term":"The combination of chemical reactions as it carries out its life processes", "correctAnswer":"Metabolism"},
+        {"term":"The parts of a magnet at which its force is strongest", "correctAnswer":"Magnetic poles"},
 
-        {"term":"The fairly constant set of internal conditions that must be maintained for survival. Ex. A person's temperature", "correctAnswer":"Homeostasis"},
+        {"term":"Energy that moves a machine", "correctAnswer":"Mechanical energy"},
 
-        {"term":"Monomers", "correctAnswer":"Small chemical units that make up larger macromolecules. They are the building blocks (single blocks)"},     
+        {"term":"A circuit that has more than one path for an electric current to follow", "correctAnswer":"Parallel Circuit"},     
 
-        {"term":"Polymers", "correctAnswer":"Molecules composed of more then one monomer. Think of them as the brick wall"},
+        {"term":"Energy that an object has because of its position or its condition", "correctAnswer":"Potential Energy"},
 
-        {"term":"Carbohydrates", "correctAnswer":"Macromolecule made of C, H, O that is used for short term energy and structural support in cell walls"},
-
-        {"term":"Lipids", "correctAnswer":"Macromolecules made of C, H, O, but very O that is used for long term energy storage and to makeup the majority of the cell membrane"},
-
-        {"term":"Proteins", "correctAnswer":"Macromolecule made of C, H, O,N, needed by body for growth and repair"},                       
-
-        {"term":"Nucleic Acids", "correctAnswer":"Macromolecule made of C, H, O, P, N that is used for the storage and passing of genetic information"},
-
-        {"term":"Chemical Reaction", "correctAnswer":"The process that changes one set of chemicals into another set of chemicals with their own unique prooperties"},
-
-        {"term":"Reactants", "correctAnswer":"Elements or compounds that enter into the chemical reaction. They are at the beginning of the chemical reaction."},
-
-        {"term":"Products", "correctAnswer":"Energy input that is needed for a reaction to begin"},           
-
-        {"term":"Activation Energy", "correctAnswer":"A substance that speeds up a chemical reaction"},
-
-        {"term":"Catalyst", "correctAnswer":"Protein catalyst that speed up the rate of specific biological reactions by lowering the amount of activation energy needed to get it going"},
-
-        {"term":"Enzyme", "correctAnswer":"The reactant of an enzyme reaction. It is what the enzyme works in order to produce products"}
+        {"term":"A circuit that has only one path for an electric current to follow", "correctAnswer":"Series Circuit"}
 
     ];
 	
