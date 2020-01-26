@@ -14,17 +14,23 @@
 6.  Features
 7.	Technologies Used
 
-### Project Demo Link: [Index Cards App](https://jcsmileyjr.github.io/Index-Cards/)
+### Project Demo Link: [Index Cards App](https://larrytimmins.github.io/Index-Cards/)
+Modified above link to test use of Kubernetes related questions added to JS/dataService.js
+
+Please see https://jcsmileyjr.github.io/Index-Cards/   for original Author Purpose, Motivation, Objectives
 
 ### Purpose:
-Online vocabulary test based on physical science and Mississippi studies high school subjects. The test is split into two types, multiple choice and a matching. 
+Drill questions on Kubernetes as I am exposed to Kubernetes related information.  Starting with basics on Kubernetes cluster components (kube01 was first update to JS/dataService.js).   Will keep initial version in spirit with Online vocabulary test based on subjects - just now it will be Kubernetes focused instead of physical sciences. 
+
+My current goal is to see if I need to add array of choices when more than one correct answer 
+exists (i.e., Docker, rkt and "container orchestration enginer" all are correct answers to the question "What runs the configured pods in Kubernetes?".  Right now, like the original, the test is split into two types, multiple choice and a matching. 
 
 ### Motivation:
-This is my child’s first year in high school and she is not adjusting well. I watched her dedicated many hours writing vocabulary terms and definitions on index cards to study for tests. Sometime she would lose the cards, damage them with food or water, get side tracked and lose her place, or not know if she have done well or not. 
+I like the solution found by JCSmileyJR and wants to see if I could borrow it so I could focus on content, and quickly get to several hundred questions.   Once I find it works -- I will explore how to ask questions that can show 3 to 4 different series of lab command sequences and have the person answer 2-3 sub questions for each 'lab'.
 
-I determine the solution is an online version of this simple but effective learning strategy. The greatest advantage is the use of her cell phone to study anywhere/anytime and none of the physical version disadvantages. 
+I fully support the author's motication "I determine the solution is an online version of this simple but effective learning strategy. The greatest advantage is the use of her cell phone to study anywhere/anytime and none of the physical version disadvantages." 
 
-### Objectives:
+### Objectives: (original author's objectives for now)
 * The online test will allow multiple choice but have an option for a harder matching version.
 * The online test would show a constant grade for feedback.
 * The online test should show the correct answer if the student chooses incorrectly.
@@ -60,3 +66,4 @@ I determine the solution is an online version of this simple but effective learn
  **CSS:** A formatting language for styling web pages
 
 *Create by JC Smiley in Sept. of 2017*
+*Repo was forked and modified for Kubernetes by Larry Timmins January 2020"
