@@ -1,4 +1,4 @@
-
+cience
 <html lang="en">
 <head>
 <script src="libs/jquery-3.2.1.min.js"></script>
@@ -46,11 +46,14 @@
                 </div>
             </div>
             <!--Left side of landing page, Science section -->
+            <!--Left side of landing page, Kubernetes section -->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">                
                 <!--Unit Tests science tests -->
-                <button type="button" class="scienceButton" ng-click="loadTest('science1','MS')">Science (Multi-Choice)</button> 
+		<!-- <button type="button" class="scienceButton" ng-click="loadTest('science1','MS')">Science (Multi-Choice)</button>  -->
+                <button type="button" class="scienceButton" ng-click="loadTest('kube01','MS')">Science (Multi-Choice)</button> 
                 <hr>
-                <button type="button" class="scienceButton" ng-click="loadTest('science1','FB')">Science (Fill in Blank)</button>                   
+		<!-- <button type="button" class="scienceButton" ng-click="loadTest('science1','FB')">Science (Fill in Blank)</button> -->
+                <button type="button" class="scienceButton" ng-click="loadTest('kube01','FB')">Science (Fill in Blank)</button>                   
             </div>           
         </div>
         <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 indexCardCSS" ng-show="finish==true">
