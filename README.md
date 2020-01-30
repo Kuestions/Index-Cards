@@ -15,7 +15,6 @@
 7.	Technologies Used
 
 ### Project Demo Link: [Index Cards App](https://larrytimmins.github.io/Index-Cards/)
-### Project Test Link: [Index Cards App](https://larrytimmins.github.com/Index-Cards/)
 Modified above link to test use of Kubernetes related questions added to JS/dataService.js
 
 Please see https://jcsmileyjr.github.io/Index-Cards/   for original Author Purpose, Motivation, Objectives
